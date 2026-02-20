@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --branco: #fff;
+    --azul-escuro: #112858;
+    --verde-agua: #30BDBD;
+    --azul-cinza: #194D71;
+    --vermelho: #BC0D0D;
+    --cinza: #C8D1DC;
+
+}
+
+body {
+    background-color: var(--branco);
+    margin: 0;
+    padding: 0;
+    top: 0;
+    font-family: 'Poppins';
+}
+
+
+.container {
+    display: flex;
+    min-height: 80vh;
+}
+
+
+.sidebar {
+    width: 200px;
+    background: var(--azul-escuro);
+    border-radius: 25px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 625px;
+    left: 20px;
+    top: 20px;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.logo-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+}
+
+.logo-text h1 {
+    color: var(--branco);
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+.logo-text p {
+    margin-top: -18px;
+    color: var(--branco);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.line{
+    padding-bottom: 20px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 16px;
+    color: var(--branco);
+    text-decoration: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.nav-item:hover {
+    background-color: var(--azul-cinza);
+}
+
+.nav-item.active {
+    background-color: var(--verde-agua);
+}
+
+
+.sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.nav-item.logout {
+    color: var(--branco);
+}
+
+.nav-item.logout:hover {
+    background-color: rgba(255, 59, 48, 0.4);
+}
+
+.main-content {
+    margin-left: 340px;
+    flex: 0.9;
+    padding: 40px 50px;
+    position: relative;
+}
+
+
+.page-header {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    color: #001f4d;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.icon-generate{
+    height: 20px;;
+}
+
+.btn-generate {
+    height: 50px;
+    width: 195px;
+    background-color: var(--verde-agua);
+    color: var(--branco);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(38, 181, 167, 0.3);
+}
+
+.btn-generate:hover {
+    background-color: #21a09c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(38, 181, 167, 0.4);
+}
+
+
+.table-container {
+    background: var(--branco);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 50px;
+}
+
+.boletim-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.boletim-table thead {
+    background-color: var(--verde-agua);
+}
+
+.boletim-table th {
+    color: var(--branco);
+    padding: 18px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.boletim-table tbody tr {
+    border-bottom: 1px solid var(--cinza);
+    transition: background-color 0.2s ease;
+}
+
+.boletim-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.boletim-table tbody tr.row-normal {
+    background-color: var(--branco);
+}
+
+.boletim-table tbody tr.row-alternate {
+    background-color: var(--cinza);
+}
+
+
+
+.boletim-table td {
+    text-align: center;
+    padding: 16px 20px;
+    font-size: 15px;
+    color: #333;
+}
+
+.boletim-table td.discipline-name {
+    text-align: start;
+    font-weight: 500;
+    color: var(--azul-escuro);
+}
+
+.boletim-table td.grade {
+    font-weight: 600;
+    color: var(--azul-escuro);
+}
+
+.boletim-table td.status {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.boletim-table td.status.approved {
+    color: var(--verde-agua);
+}
+
+.boletim-table td.status.failed {
+    color: var(--vermelho);
+}
+
+
+.formula-card {
+    height: 40px;
+    border-left: 30px solid var(--verde-agua);
+    background: var(--branco);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.formula-content {
+    margin-left: 240px;
+}
+
+
+.formula-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.formula-title {
+    color: var(--verde-agua);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.formula-equals {
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.formula-fraction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.fraction-numerator {
+    color: var(--verde-agua);
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: 2px solid black;
+}
+
+.fraction-denominator {
+    color: var(--verde-agua);
+    font-size: 15px;
+    font-weight: 600;
+}
