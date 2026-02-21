@@ -123,58 +123,140 @@ body {
 }
 
 .page-header {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .page-header h1 {
+    margin-top: 15px;
     color: var(--azul-escuro);
     font-size: 55px;
     font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.subtitle {
-    color: var(--verde-agua);
-    font-size: 18px;
-    font-weight: 400;
 }
 
 
-.disciplines-page {
-    padding-top: 30px;
-}
-
-.disciplines-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.discipline-card {
-    height: 40px;
-    background: var(--branco);
-    border-radius: 20px;
-    padding: 15px;
+.filters {
+    margin-top: -30px;
     display: flex;
-    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background-color: var(--branco);
+    border: 2px solid #ddd;
+    color: #999;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    border-color: var(--verde-agua);
+    color: var(--verde-agua);
+}
+
+.tab-btn.active {
+    background-color: var(--verde-agua);
+    border-color: var(--verde-agua);
+    color: var(--branco);
+}
+
+
+.observations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.observation-card {
+    height: 80px;
+    background: var(--branco);
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
     gap: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    border-right: 15px solid var(--verde-agua);
     transition: all 0.3s ease;
-    cursor: pointer;
 }
 
-.discipline-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+.observation-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
 }
 
-.discipline-icon {
-    height: 30px;
+
+.left-line {
+    width: 6px;
+    height: 100%;
+    background-color: var(--verde-agua);
+    border-radius: 5px;
 }
 
-.discipline-card h3 {
-    color: var(--azul-escuro);
-    font-size: 18px;
+.observation-content {
+    flex: 1;
+}
+
+.observation-header {
+    margin-top: -5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+
+
+.professor-name {
+    color: #666;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.professor-name .highlight {
+    color: var(--verde-agua);
     font-weight: 600;
+}
+
+.observation-date {
+    color: var(--cinza);
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.observation-text {
+    margin-top: -5px;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.observation-footer {
+    display: flex;
+    gap: 5px;
+}
+
+.observation-type {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--branco);
+}
+
+.observation-type.elogio {
+    background-color: var(--verde-agua);
+}
+
+.observation-type.aviso {
+    background-color: #ff9500;
+}
+
+.observation-type.informativa {
+    background-color: #5b7aff;
 }
