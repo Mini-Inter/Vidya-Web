@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #112858, #1A8585);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #112858, #1A8585);
+}
+
+.bolhas {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.bolha {
+    position: absolute;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.bolha1 {
+    width: 380px;
+    top: 20px;
+    left: 0;
+}
+
+.bolha2 {
+    width: 500px;
+    bottom: 0;
+    left: 250px;
+}
+
+.bolha3 {
+    width: 490px;
+    top: 70px;
+    right: 230px;
+}
+
+.bolha4 {
+    width: 350px;
+    top: 0;
+    right: 0;
+}
+
+.card {
+    width: 440px;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    color: white;
+    position: relative;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 25px;
+
+    background: linear-gradient(140deg,
+            rgba(255, 255, 255, 0.35),
+            rgba(255, 255, 255, 0.05));
+
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.logo {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    height: 30px;
+    object-fit: contain;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+}
+
+.subtitulo {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.inputt {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.inputt label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+
+.inputt input {
+  padding: 12px 15px;
+  border-radius: 12px;
+
+  border: 1px solid white;
+  background: rgba(255,255,255,0.05);
+
+  color: white;
+  outline: none;
+}
+
+.inputt input:focus {
+  border: 1px solid rgba(255,255,255,0.8);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+button {
+  width: 150px;
+  margin: -1px auto 0 auto;
+  display: block;
+  padding: 10px;
+
+  border: none;
+  border-radius: 25px;
+
+  background: #159898;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
