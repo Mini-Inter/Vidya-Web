@@ -29,7 +29,7 @@ html, body{
     padding: 0 10px;
 }
 
-.landing {
+.hero {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -54,6 +54,7 @@ button {
     gap: 8px;
     display: inline-flex;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 button:hover {
