@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --branco: #fff;
+    --azul-escuro: #112858;
+    --verde-agua: #30BDBD;
+    --azul-cinza: #194D71;
+    --vermelho: #BC0D0D;
+    --cinza: #C8D1DC;
+
+}
+
+body {
+    background-color: var(--branco);
+    margin: 0;
+    padding: 0;
+    top: 0;
+    font-family: 'Poppins';
+}
+
+
+.container {
+    display: flex;
+    min-height: 80vh;
+}
+
+
+.sidebar {
+    width: 200px;
+    background: var(--azul-escuro);
+    border-radius: 25px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 625px;
+    left: 20px;
+    top: 20px;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.logo-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+}
+
+.logo-text h1 {
+    color: var(--branco);
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+.logo-text p {
+    margin-top: -18px;
+    color: var(--branco);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.line{
+    padding-bottom: 20px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 16px;
+    color: var(--branco);
+    text-decoration: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.nav-item:hover {
+    background-color: var(--azul-cinza);
+}
+
+.nav-item.active {
+    background-color: var(--verde-agua);
+}
+
+
+.sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.nav-item.logout {
+    color: var(--branco);
+}
+
+.nav-item.logout:hover {
+    background-color: rgba(255, 59, 48, 0.4);
+}
+
+.main-content {
+    margin-left: 340px;
+    flex: 0.9;
+    padding: 40px 50px;
+    position: relative;
+}
+
+.page-header {
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    margin-top: 15px;
+    color: var(--azul-escuro);
+    font-size: 55px;
+    font-weight: 700;
+}
+
+
+.filters {
+    margin-top: -30px;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background-color: var(--branco);
+    border: 2px solid #ddd;
+    color: #999;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    border-color: var(--verde-agua);
+    color: var(--verde-agua);
+}
+
+.tab-btn.active {
+    background-color: var(--verde-agua);
+    border-color: var(--verde-agua);
+    color: var(--branco);
+}
+
+
+.observations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.observation-card {
+    height: 80px;
+    background: var(--branco);
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.observation-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+
+.left-line {
+    width: 6px;
+    height: 100%;
+    background-color: var(--verde-agua);
+    border-radius: 5px;
+}
+
+.observation-content {
+    flex: 1;
+}
+
+.observation-header {
+    margin-top: -5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+
+
+.professor-name {
+    color: #666;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.professor-name .highlight {
+    color: var(--verde-agua);
+    font-weight: 600;
+}
+
+.observation-date {
+    color: var(--cinza);
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.observation-text {
+    margin-top: -5px;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.observation-footer {
+    display: flex;
+    gap: 5px;
+}
+
+.observation-type {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--branco);
+}
+
+.observation-type.elogio {
+    background-color: var(--verde-agua);
+}
+
+.observation-type.aviso {
+    background-color: #ff9500;
+}
+
+.observation-type.informativa {
+    background-color: #5b7aff;
+}
