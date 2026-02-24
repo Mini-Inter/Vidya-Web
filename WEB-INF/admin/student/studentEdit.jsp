@@ -1,0 +1,91 @@
+<%@ page import="com.school.miniinter.models.Students.Students" %>
+<%@ page import="com.school.miniinter.models.Class.Class" %>
+<%@ page import="java.util.List" %>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidya - CRUD</title>
+    <link rel="stylesheet" href="../css/addEdit.css">
+</head>
+<%
+String active = "students";
+Students student = (Students) session.getAttribute("student");
+
+List<Class> classes = (List<Class>)  session.getAttribute("classes");
+%>
+<body>
+    <div class="container">
+        <%@include file="../../common/sidebarAdmin.jsp"%>
+
+        <main class="main-content">
+
+            <h1>Alunos</h1>
+            <h4>Editar aluno</h4>
+
+            <div class="form-add">
+                <div class="form-card">
+
+                    <form class="student-form" action="<%=request.getContextPath()%>/adminStudents?type=updateStudent" method="post">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="classroom">Turma</label>
+                                <select name="classroom" id="classroom">
+                                    <option value="" disabled >Selecione uma classroom</option>
+                                    <%
+                                    for (Class classroom : classes) {
+                                    %>
+                                    <option value="<%=classroom.getId()%>"><%=classroom.getSeries()%>°<%=classroom.getClassroom()%></option>
+                                    <%
+                                    }
+                                    %>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Nome </label>
+                                <input type="text" id="name" name="name" value="Ana Souza" required>
+                            </div>
+
+                        </div>
+
+                        <div class="form-row">  
+                            <div class="form-group">
+                                <label for="phone">Telefone (com DDD) </label>
+                                <input type="tel" id="phone" name="phone" value="(11) 98888-9897" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="birth">Data de nascimento </label>
+                                <input type="date" id="birth" name="birth" value="2009-04-17" required>
+                            </div>
+
+                            
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email </label>
+                                <input type="email" id="email" name="email" value="ana.souza@gmail.com" required>
+                            </div>   
+
+                            <div class="form-group">
+                                <label for="pass">Senha </label>
+                                <input type="password" id="pass" name="pass" value="*******" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <span>Editar</span>
+                            </button>
+                            <form action="<%=request.getContextPath()%>/adminStudents?type=noot">
+                                <input value="Cancelar" type="submit">
+                            </form>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
