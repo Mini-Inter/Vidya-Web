@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #112858, #1A8585);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #112858, #1A8585);
+}
+
+.bolhas {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.bolha {
+    position: absolute;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.bolha1 {
+    width: 380px;
+    top: 20px;
+    left: 0;
+}
+
+.bolha2 {
+    width: 500px;
+    bottom: 0;
+    left: 250px;
+}
+
+.bolha3 {
+    width: 490px;
+    top: 70px;
+    right: 230px;
+}
+
+.bolha4 {
+    width: 350px;
+    top: 0;
+    right: 0;
+}
+
+.card {
+    width: 440px;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    color: white;
+    position: relative;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 25px;
+
+    background: linear-gradient(140deg,
+            rgba(255, 255, 255, 0.35),
+            rgba(255, 255, 255, 0.05));
+
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.logo {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    height: 30px;
+    object-fit: contain;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+}
+
+.subtitulo {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.inputt {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.inputt label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+
+.inputt input {
+  padding: 12px 15px;
+  border-radius: 12px;
+
+  border: 1px solid white;
+  background: rgba(255,255,255,0.05);
+
+  color: white;
+  outline: none;
+}
+
+.inputt input:focus {
+  border: 1px solid rgba(255,255,255,0.8);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+button {
+  width: 150px;
+  margin: -1px auto 0 auto;
+  display: block;
+  padding: 10px;
+
+  border: none;
+  border-radius: 25px;
+
+  background: #159898;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+.bottom-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+
+.bottom-link a {
+  color: #20E3E3;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.bottom-link a:hover {
+  text-decoration: underline;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 15, 30, 0.85);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup {
+  position: relative;
+  width: 400px;
+  padding: 45px 35px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(95, 95, 95, 0.25);
+  color: #ffffff;
+  text-align: center;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    inset 0 0 25px rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  animation: popupFade 0.35s ease;
+}
+
+.popup::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.35),
+    transparent 60%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+}
+
+.popup::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  background: linear-gradient(
+    140deg,
+    rgba(255,255,255,0.25),
+    rgba(255,255,255,0.05)
+  );
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.popup input {
+  width: 100%;
+  padding: 14px 18px;
+  margin: 20px 0;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  font-size: 14px;
+  backdrop-filter: blur(10px);
+}
+
+.popup input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#continuarBtn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #1ecad3, #169ca3);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#continuarBtn:hover {
+  transform: translateY(-2px);
+}
+
+@keyframes popupFade {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lancarNotas.css">
+    <title>Vidya - Professor</title>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img class="logo-icon" src="imgsHome/logoVidya.png"></img>
+                <div class="logo-text">
+                    <h1>vidya</h1>
+                    <p>Plataforma escolar</p>
+                </div>
+            </div>
+
+            <img class="line" src="imgsHome/linha.png" alt="divisor">
+
+            <nav class="nav-menu">
+                <a href="homeProf.html" class="nav-item">
+                    <img class="icon" src="imgsHome/homeIcon.png"></img>
+                    <span class="text">Home</span>
+                </a>
+                <a href="meusAlunos.html" class="nav-item">
+                    <img class="icon" src="imgsHome/alunosIcon.png"></img>
+                    <span class="text">Alunos</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <img class="icon" src="imgsHome/notasIcon.png"></img>
+                    <span class="text">Notas</span>
+                </a>
+                <a href="observacoes.html" class="nav-item">
+                    <img class="icon" src="imgsHome/obsIcon.png"></img>
+                    <span class="text">Observações</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item trocar">
+                    <img class="icon" src="imgsHome/trocarIcon.png"></img>
+                    <span class="text">Trocar disciplina</span>
+                </a>
+                <a href="perfilProf.html" class="nav-item">
+                    <img class="icon" src="imgsHome/perfilbranco.png"></img>
+                    <span class="text">Perfil</span>
+                </a>
+                <a href="/Inicio/index.html" class="nav-item logout">
+                    <img class="icon" src="imgsHome/sairIcon.png"></img>
+                    <span class="text">Sair da conta</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Lançar Notas</h1>
+            </header>
+
+            <div class="container">
+
+                <div class="card">
+
+                    <h3>Selecione a turma</h3>
+
+                    <div class="select-wrapper">
+                        <select>
+                            <option>2° Ano G</option>
+                            <option>2° Ano H</option>
+                        </select>
+                    </div>
+
+                    <div class="table">
+
+                        <div class="table-header">
+                            <span>Aluno</span>
+                            <span>Nota 1° Sem</span>
+                            <span>Nota 2° Sem</span>
+                            <span>Nota Final</span>
+                        </div>
+
+
+                        <div class="table-row">
+                            <span class="aluno">Nicolas Isepe</span>
+
+                            <div class="nota-box">
+                                <input type="number" value="8.0">
+                                <button class="save-btn">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 3v12"></path>
+                                        <path d="M7 10l5 5 5-5"></path>
+                                        <path d="M5 21h14"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="nota-box">
+                                <input type="number" value="9.0">
+                                <button class="save-btn">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 3v12"></path>
+                                        <path d="M7 10l5 5 5-5"></path>
+                                        <path d="M5 21h14"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <span class="nota-final">8.5</span>
+                        </div>
+
+                        <div class="table-row alt">
+                            <span class="aluno">Maria Grilo</span>
+
+                            <div class="nota-box">
+                                <input type="number" value="10">
+                                <button class="save-btn">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 3v12"></path>
+                                        <path d="M7 10l5 5 5-5"></path>
+                                        <path d="M5 21h14"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="nota-box">
+                                <input type="number" value="8.0">
+                                <button class="save-btn">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 3v12"></path>
+                                        <path d="M7 10l5 5 5-5"></path>
+                                        <path d="M5 21h14"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <span class="nota-final">9.0</span>
+                        </div>
+
+                        <div class="table-row">
+                            <span class="aluno">João Silva</span>
+
+                            <div class="nota-box">
+                                <input type="number" value="7.0">
+                                <button class="save-btn">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 3v12"></path>
+                                        <path d="M7 10l5 5 5-5"></path>
+                                        <path d="M5 21h14"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="nota-box">
+                                <input type="number" value="8.0">
+                                <button class="save-btn">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 3v12"></path>
+                                        <path d="M7 10l5 5 5-5"></path>
+                                        <path d="M5 21h14"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <span class="nota-final">7.5</span>
+                        </div>
+
+                        <div class="table-row alt">
+                            <span class="aluno">Lucas Ramos</span>
+
+                            <div class="nota-box">
+                                <input type="number" value="6.5">
+                                <button class="save-btn">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 3v12"></path>
+                                        <path d="M7 10l5 5 5-5"></path>
+                                        <path d="M5 21h14"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="nota-box">
+                                <input type="number" value="9.5">
+                                <button class="save-btn">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 3v12"></path>
+                                        <path d="M7 10l5 5 5-5"></path>
+                                        <path d="M5 21h14"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <span class="nota-final">8.0</span>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+
+</body>
+
+</html>

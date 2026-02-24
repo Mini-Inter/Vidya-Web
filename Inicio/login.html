@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Vidya - login</title>
+</head>
+
+<body>
+    <div class="background">
+
+        <div class="bolhas">
+            <img src="/imgs/bolha1.png" class="bolha bolha1">
+            <img src="/imgs/bolha2.png" class="bolha bolha2">
+            <img src="/imgs/bolha3.png" class="bolha bolha3">
+            <img src="/imgs/bolha4.png" class="bolha bolha4">
+        </div>
+
+        <div class="card">
+
+            <div class="logo">
+                <img src="imgs/logoNav.png" alt="vidya logo">
+            </div>
+
+            <h1>Bem-vindo(a) de volta!</h1>
+            <p class="subtitulo">
+                Por favor, entre com as suas credenciais
+            </p>
+
+            <form>
+
+                <div class="inputt">
+                    <label>Email</label>
+                    <input type="email">
+                </div>
+
+                <div class="inputt">
+                    <label>Senha</label>
+                    <input type="password">
+                </div>
+
+                <button type="submit">Entrar</button>
+
+                <p class="bottom-link">
+                    Não tem uma conta?
+                    <a href="#" id="abrirPopup">Cadastre-se</a>
+                </p>
+
+            </form>
+
+            <div id="overlay" class="overlay">
+                <div class="popup">
+                    <h2>Crie sua conta</h2>
+                    <p>Insira o seu CPF:</p>
+                    <input type="text" placeholder="Digite seu CPF">
+                    <button id="continuarBtn">Continuar</button>
+                </div>
+            </div>
+
+            <script>
+                const abrirPopup = document.getElementById("abrirPopup");
+                const overlay = document.getElementById("overlay");
+                const continuarBtn = document.getElementById("continuarBtn");
+
+                // Abrir popup
+                abrirPopup.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    overlay.classList.add("active");
+                });
+
+                // Fechar clicando fora
+                overlay.addEventListener("click", function (e) {
+                    if (e.target === overlay) {
+                        overlay.classList.remove("active");
+                    }
+                });
+
+                // Redirecionar ao clicar em Continuar
+                continuarBtn.addEventListener("click", function () {
+                    window.location.href = "cadastro.html";
+                });
+
+                // Fechar com ESC
+                document.addEventListener("keydown", function (e) {
+                    if (e.key === "Escape") {
+                        overlay.classList.remove("active");
+                    }
+                });
+            </script>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
