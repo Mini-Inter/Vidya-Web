@@ -9,47 +9,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - Aluno</title>
-    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/css/cssStudent/perfil.css">
 </head>
 <body>
     <div class="container">
         <aside class="sidebar">
             <div class="logo">
-                <img class="logo-icon" src="assets/Vydia-logo.jpg">
+                <img class="logo-icon" src="${pageContext.request.contextPath}/assets/assetsStudent/Vydia-logo.jpg">
                 <div class="logo-text">
                     <h1>vidya</h1>
                     <p>Plataforma escolar</p>
                 </div>
             </div>
 
-            <img class="line" src="assets/navbar-linha.png" alt="divisor">
+            <img class="line" src="${pageContext.request.contextPath}/assets/assetsStudent/navbar-linha.png" alt="divisor">
 
             <nav class="nav-menu">
                 <a href="homeStudent" class="nav-item">
-                    <img class="icon" src="assets/navbar-home.png">
+                    <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/navbar-home.png">
                     <span class="text">Home</span>
                 </a>
                 <a href="gradeCard" class="nav-item">
-                    <img class="icon" src="assets/navbar-notas.png">
+                    <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/navbar-notas.png">
                     <span class="text">Notas</span>
                 </a>
                 <a href="observations" class="nav-item">
-                    <img class="icon" src="assets/navbar-observacoes.png">
+                    <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/navbar-observacoes.png">
                     <span class="text">Observações</span>
                 </a>
                 <a href="studentSubjects" class="nav-item ">
-                    <img class="icon" src="assets/navbar-disciplinas.png">
+                    <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/navbar-disciplinas.png">
                     <span class="text">Disciplinas</span>
                 </a>
             </nav>
 
             <div class="sidebar-footer">
                 <a href="profileStudent" class="nav-item active">
-                    <img class="icon" src="assets/navbar-perfil.png">
+                    <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/navbar-perfil.png">
                     <span class="text">Perfil</span>
                 </a>
                 <a href="#" class="nav-item logout">
-                    <img class="icon" src="assets/navbar-exit.png">
+                    <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/navbar-exit.png">
                     <span class="text">Sair da conta</span>
                 </a>
             </div>
@@ -106,7 +107,7 @@
             <div class="info-card">
 
                 <div class="title-personal-info">
-                    <img class="info-icon" src="assets/info.png">
+                    <img class="info-icon" src="${pageContext.request.contextPath}/assets/assetsStudent/info.png">
                     
                     <h3>Informações Pessoais</h3>
                 </div>
@@ -114,7 +115,7 @@
                 <div class="info-grid">
                     <div class="personal-info-item">
                         <div class="personal-info-label">
-                            <img class="icon" src="assets/data.png">
+                            <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/data.png">
                             <span>DATA DE NASCIMENTO</span>
                         </div>
                         <div
@@ -123,7 +124,7 @@
 
                     <div class="personal-info-item">
                         <div class="personal-info-label">
-                            <img class="icon" src="assets/email.png">
+                            <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/email.png">
                             <span>E-MAIL</span>
                         </div>
                         <div class="personal-info-value"><%=completeInfo.getLogin()%>@vidya .org.br</div>
@@ -131,7 +132,7 @@
 
                     <div class="personal-info-item">
                         <div class="personal-info-label">
-                            <img class="icon" src="assets/telefone.png">
+                            <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/telefone.png">
                             <span>TELEFONE</span>
                         </div>
                         <div
@@ -140,7 +141,7 @@
                     </div>
 <%--                    <div class="personal-info-item">--%>
 <%--                        <div class="personal-info-label">--%>
-<%--                            <img class="icon" src="assets/local.png">--%>
+<%--                            <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/local.png">--%>
 <%--                            <span>ENDEREÇO</span>--%>
 <%--                        </div>--%>
 <%--                        <div class="personal-info-value">São Paulo - SP</div>--%>
