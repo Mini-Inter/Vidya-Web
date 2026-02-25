@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -7,33 +7,31 @@
     <link rel="stylesheet" href="../css/addEdit.css">
 </head>
 <%
-    String active = "subjects";
+    String action = "classes";
 %>
 <body>
     <div class="container">
-        
+
         <%@include file="../../../common/sidebarAdmin.jsp"%>
 
         <main class="main-content">
 
-            <h1>Matérias</h1>
-            <h4>Adicionar nova matéria</h4>
+            <h1>Turma</h1>
+            <h4>Adicionar nova classroom</h4>
 
             <div class="form-add">
                 <div class="form-card">
 
-                    <form class="student-form">
+                    <form class="student-form" action="<%=request.getContextPath()%>/adminClasses?type=classInsert">
 
                         <div class="form-row">
-
                             <div class="form-group">
-                                <label for="name">Nome da matéria </label>
-                                <input type="text" id="name" name="name" placeholder="Ex: Geografia" required>
+                                <label for="series">Série</label>
+                                <input type="text" id="series" name="series" placeholder="Ex: 2° Ano" required>
                             </div>
-                            
                             <div class="form-group">
-                                    <label for="description">Descrição </label>
-                                    <input type="text" id="description" name="description" placeholder="Ex: Geografia do Brasil e do Mundo" required>
+                                    <label for="classroom">Turma</label>
+                                    <input type="text" id="classroom" name="classroom"  placeholder="Ex: G" required>
                             </div>
                         </div>
 
@@ -41,11 +39,7 @@
                             <button type="submit" class="btn btn-primary">
                                 <span>Adicionar</span>
                             </button>
-                            <form action="<%=request.getContextPath()%>/adminSubjects?type=noot">
-                                <button class="btn btn-secundary">
-                                    Cancelar
-                                </button>
-                            </form>
+                            <a href="<%=request.getContextPath()%>/adminClasses?type=noot" class="btn btn-secundary">Cancelar</a>
                         </div>
                     </form>
                 </div>

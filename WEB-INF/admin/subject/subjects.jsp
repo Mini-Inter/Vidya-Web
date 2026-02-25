@@ -16,7 +16,7 @@
 <body>
     <div class="container">
 
-        <%@include file="../../common/sidebarAdmin.jsp"%>
+        <%@include file="../../../common/sidebarAdmin.jsp"%>
 
         <main class="main-content">
             <h1>Matérias</h1>

@@ -1,5 +1,5 @@
-<%@ page import="com.school.miniinter.models.Teacher.Teacher" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.school.miniinter.models.Reports.CompleteReport" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="pt-BR">
 <head>
@@ -9,24 +9,24 @@
     <link rel="stylesheet" href="../css/crud.css">
 </head>
 <%
-    String active = "teachers";
+    String active = "reports";
 
-    List<Teacher> teachers = (List<Teacher>) session.getAttribute("teachers");
+    List<CompleteReport> reports = (List<CompleteReport>) session.getAttribute("reports");
 %>
 <body>
     <div class="container">
-        
+
         <%@include file="../../../common/sidebarAdmin.jsp"%>
 
         <main class="main-content">
-            <h1>Professores</h1>
+            <h1>Observações</h1>
             <h4>CRUD</h4>
             <div class="table-controls">
                 <div class="search-box">
-                    <img alt="" class="search-icon" src="../assets/pesquisar.png">
+                    <img class="search-icon" src="../assets/pesquisar.png">
                     <input type="text" class="search-input" placeholder="Buscar por nome">
                 </div>
-                <a href="teacherInsert.jsp" class="btn-adicionar">
+                <a href="reportInsert.jsp" class="btn-adicionar">
                     <img src="../assets/add.png" class="add-icon">
                     <span>Adicionar</span>
                 </a>
@@ -34,9 +34,9 @@
             <div class="table-section">
                 <div class="table-container">
                     <%
-                        if (teachers==null || teachers.isEmpty()) {
+                    if (reports==null || reports.isEmpty()) {
                     %>
-                    <h2>Nenhum professor encontrado!</h2>
+                    <h2>Nenhuma observação encontrada!</h2>
                     <%
                         } else {
                     %>
@@ -44,33 +44,31 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Nome completo</th>
-                                <th>Primeiro nome</th>
-                                <th>Último nome</th>
-                                <th>Data de nascimento</th>
-                                <th>Telefone</th>
-                                <th>Login</th>
-                                <th>Criado em</th>
+                                <th>Professor</th>
+                                <th>Descrição</th>
+                                <th>Tipo</th>
+                                <th>Enviado em</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody>
                             <%
-                                for (Teacher teacher : teachers) {
+                            for (CompleteReport report : reports) {
                             %>
                             <tr>
-                                <td><%=teacher.getId()%></td>
-                                <td><%=teacher.getName()%></td>
-                                <td><%=teacher.getFirstName()%></td>
-                                <td><%=teacher.getLastName()%></td>
-                                <td><%=teacher.getBirthDate()%></td>
-                                <td><%=teacher.getPhone()%></td>
-                                <td><%=teacher.getLogin()%>@vidya.org.br</td>
-                                <td><%=teacher.getCreatedAt()%></td>
+                                <td><%=report.getId()%></td>
+                                <td><%=report.getTeacher()%></td>
+                                <td><%=report.getDescription()%></td>
+                                <td><%=report.getType()%></td>
+                                <td><%=report.getSend_at()%></td>
                                 <td class="actions">
-                                    <button class="btn-edit" type="submit"><img alt="" src="../assets/editar.png"></button>
-                                    <form action="<%=request.getContextPath()%>/adminTeachers?type=deleteTeacher" method="post">
-                                        <button class="btn-delete">
+                                    <form action="<%=request.getContextPath()%>/adminReports?type=editReport" method="post">
+                                        <button class="btn-edit" type="submit">
+                                            <img alt="" src="../assets/editar.png">
+                                        </button>
+                                    </form>
+                                    <form action="<%=request.getContextPath()%>/adminReports?type=deleteReport" method="post">
+                                        <button class="btn-delete" type="submit">
                                             <img alt="" src="../assets/deletar.png">
                                         </button>
                                     </form>

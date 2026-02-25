@@ -12,7 +12,7 @@
     %>
     <div class="container">
 
-        <%@include file="../../common/sidebarAdmin.jsp"%>
+        <%@include file="../../../common/sidebarAdmin.jsp"%>
 
         <main class="main-content">
 
