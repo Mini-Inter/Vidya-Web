@@ -1,22 +1,41 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+String error = String.valueOf(session.getAttribute("error"));
+String login = "";
+String password = "";
+if (session.getAttribute("login")!=null) {
+login = String.valueOf(session.getAttribute("login"));
+}
+if (session.getAttribute("password")!=null) {
+password = String.valueOf(session.getAttribute("password"));
+}
+%>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Vidya - login</title>
 </head>
 
 <body>
+    <%
+        if (!error.equals("null")) {
+    %>
+    <p style="color: red"><%=error%></p>
+    <%
+            session.setAttribute("error", null);
+        }
+    %>
     <div class="background">
 
         <div class="bolhas">
-            <img src="/imgs/bolha1.png" class="bolha bolha1">
-            <img src="/imgs/bolha2.png" class="bolha bolha2">
-            <img src="/imgs/bolha3.png" class="bolha bolha3">
-            <img src="/imgs/bolha4.png" class="bolha bolha4">
+            <img src="${pageContext.request.contextPath}/Inicio/imgs/bolha1.png" class="bolha bolha1">
+            <img src="${pageContext.request.contextPath}/Inicio/imgs/bolha2.png" class="bolha bolha2">
+            <img src="${pageContext.request.contextPath}/Inicio/imgs/bolha3.png" class="bolha bolha3">
+            <img src="${pageContext.request.contextPath}/Inicio/imgs/bolha4.png" class="bolha bolha4">
         </div>
 
         <div class="card">
@@ -30,23 +49,23 @@
                 Por favor, entre com as suas credenciais
             </p>
 
-            <form>
+            <form action="<%=request.getContextPath()%>/auth?type=login" method="post">
 
                 <div class="inputt">
-                    <label>Email</label>
-                    <input type="email">
+                    <label for="login">Email</label>
+                    <input value="<%=login%>" required name="login" id="login" type="text">
                 </div>
 
                 <div class="inputt">
-                    <label>Senha</label>
-                    <input type="password">
+                    <label for="pw">Senha:</label>
+                    <input value="<%=password%>" required name="pw" id="pw" type="password">
                 </div>
 
                 <button type="submit">Entrar</button>
 
                 <p class="bottom-link">
                     Não tem uma conta?
-                    <a href="#" id="abrirPopup">Cadastre-se</a>
+                    <a href="cadastro.jsp" id="abrirPopup">Cadastre-se</a>
                 </p>
 
             </form>
@@ -80,7 +99,7 @@
 
                 // Redirecionar ao clicar em Continuar
                 continuarBtn.addEventListener("click", function () {
-                    window.location.href = "cadastro.html";
+                    window.location.href = "auth?type=signup&pre=true";
                 });
 
                 // Fechar com ESC

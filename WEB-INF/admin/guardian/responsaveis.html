@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidya - CRUD</title>
+    <link rel="stylesheet" href="../css/crud.css">
+</head>
+<body>
+    <div class="container">
+        
+        <aside class="sidebar">
+            <div class="logo">
+                <img class="logo-icon" src="../assets/Vydia-logo.jpg"></img>
+                <div class="logo-text">
+                    <h1>vidya</h1>
+                    <p>Plataforma escolar</p>
+                </div>
+            </div>
+
+            <img class="line" src="../assets/navbar-linha.png" alt="divisor">
+
+            <nav class="nav-menu">
+                <a href="../student/students.jsp" class="nav-item">
+                    <img class="icon" src="../assets/navbar-aluno.png"></img>
+                    <span class="text">Alunos</span>
+                </a>
+                <a href="../teacher/teachers.jsp" class="nav-item">
+                    <img class="icon" src="../assets/navbar-prof.png"></img>
+                    <span class="text">Professores</span>
+                </a>
+                <a href="../subject/subjects.jsp" class="nav-item">
+                    <img class="icon" src="../assets/navbar-disciplinas.png"></img>
+                    <span class="text">Matérias</span>
+                </a>
+                <a href="../class/turma.html" class="nav-item">
+                    <img class="icon" src="../assets/navbar-turma.png"></img>
+                    <span class="text">Turmas</span>
+                </a>
+                <a href="../report/observacoes.html" class="nav-item ">
+                    <img class="icon" src="../assets/navbar-observacoes.png"></img>
+                    <span class="text">Observações</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <img class="icon" src="../assets/navbar-responsaveis.png"></img>
+                    <span class="text">Responsáveis</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+<<<<<<< HEAD:WEB-INF/admin/guardian/responsaveis.html
+                <a href="#" class="nav-item logout">
+                    <img class="icon" src="../assets/navbar-exit.png"></img>
+=======
+                <a href="/index.html" class="nav-item logout">
+                    <img class="icon" src="./assets/navbar-exit.png"></img>
+>>>>>>> cfbee21f7d797165b065bf9541c614a7bd2627d1:Crud/responsaveis.html
+                    <span class="text">Sair da conta</span>
+                </a>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+            <h1>Responsáveis</h1>
+            <h4>CRUD</h4>
+            <div class="table-controls">
+                <div class="search-box">
+                    <img class="search-icon" src="../assets/pesquisar.png">
+                    <input type="text" class="search-input" placeholder="Buscar por nome">
+                </div>
+                <a href="addresponsavel.html" class="btn-adicionar">
+                    <img src="../assets/add.png" class="add-icon">
+                    <span>Adicionar</span>
+                </a>
+            </div>
+            <div class="table-section">
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome completo</th>
+                                <th>Primeiro nome</th>
+                                <th>Último nome</th>
+                                <th>Data de nascimento</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>João Andrade Santos</td>
+                                <td>João</td>
+                                <td>Santos</td>
+                                <td>14/02/2001</td>
+                                <td class="actions">
+                                    <a class="btn-edit" href="editresponsavel.html"><img src="../assets/editar.png"></a>
+                                    <button class="btn-delete"><img src="../assets/deletar.png"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>João Andrade Santos</td>
+                                <td>João</td>
+                                <td>Santos</td>
+                                <td>14/02/2001</td>
+                                <td class="actions">
+                                    <a class="btn-edit" href="editresponsavel.html"><img src="../assets/editar.png"></a>
+                                    <button class="btn-delete"><img src="../assets/deletar.png"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>João Andrade Santos</td>
+                                <td>João</td>
+                                <td>Santos</td>
+                                <td>14/02/2001</td>
+                                <td class="actions">
+                                    <a class="btn-edit" href="editresponsavel.html"><img src="../assets/editar.png"></a>
+                                    <button class="btn-delete"><img src="../assets/deletar.png"></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
