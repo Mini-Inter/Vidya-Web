@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="container">
-        <%@ include file="../common/sidebarStudent.jsp"%>
+        <%@ include file="../../common/sidebarStudent.jsp"%>
 
         <main class="main-content">
             <header class="page-header">

@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="container">
-        <%@ include file="../common/sidebarStudent.jsp"%>
+        <%@ include file="../../common/sidebarStudent.jsp"%>
 
         <main class="main-content">
             <img class="welcome" src="${pageContext.request.contextPath}/assets/assetsStudent/mascote-pandinha.jpg"
