@@ -32,16 +32,16 @@ password = String.valueOf(session.getAttribute("password"));
     <div class="background">
 
         <div class="bolhas">
-            <img src="${pageContext.request.contextPath}/Inicio/imgs/bolha1.png" class="bolha bolha1">
-            <img src="${pageContext.request.contextPath}/Inicio/imgs/bolha2.png" class="bolha bolha2">
-            <img src="${pageContext.request.contextPath}/Inicio/imgs/bolha3.png" class="bolha bolha3">
-            <img src="${pageContext.request.contextPath}/Inicio/imgs/bolha4.png" class="bolha bolha4">
+            <img src="${pageContext.request.contextPath}/assets/imgs/bolha1.png" class="bolha bolha1">
+            <img src="${pageContext.request.contextPath}/assets/imgs/bolha2.png" class="bolha bolha2">
+            <img src="${pageContext.request.contextPath}/assets/imgs/bolha3.png" class="bolha bolha3">
+            <img src="${pageContext.request.contextPath}/assets/imgs/bolha4.png" class="bolha bolha4">
         </div>
 
         <div class="card">
 
             <div class="logo">
-                <img src="imgs/logoNav.png" alt="vidya logo">
+                <img src="${pageContext.request.contextPath}/assets/imgs/logoNav.png" alt="vidya logo">
             </div>
 
             <h1>Bem-vindo(a) de volta!</h1>

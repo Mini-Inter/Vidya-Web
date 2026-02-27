@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Inicio/css/style.css">
+    <link rel="stylesheet" href="css/cssLogin/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Vidya</title>
@@ -11,7 +11,7 @@
 <body>
     <section class="landing">
         <div class="logo">
-            <img src="Inicio/imgs/logoNav.png" alt="logo">
+            <img src="assets/imgs/logoNav.png" alt="logo">
         </div>
 
         <div class="texto">
@@ -22,9 +22,8 @@
                 Acesse agora <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>
-
         <div class="imagem">
-            <img src="Inicio/imgs/img%20landing.png" alt="imagem da landing">
+            <img src="assets/imgs/img%20landing.png" alt="imagem da landing">
         </div>
     </section>
 </body>
