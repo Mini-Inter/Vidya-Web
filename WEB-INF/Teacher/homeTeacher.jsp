@@ -85,7 +85,7 @@
                         </div>
                     </a>
 
-                    <a href="studentGrades">
+                    <a href="updateGrade">
                         <div class="quick-card">
                             <img class="quick-icon" src="<%=request.getContextPath()%>/assets/assetsTeacher/notasverde.png">
                             <h4>Lançar notas</h4>

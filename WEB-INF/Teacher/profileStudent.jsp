@@ -26,11 +26,11 @@
                     <img class="icon" src="../../assets/assetsTeacher/homeIcon.png"></img>
                     <span class="text">Home</span>
                 </a>
-                <a href="meusAlunos.html" class="nav-item active">
+                <a href="studentsTeacher.jsp" class="nav-item active">
                     <img class="icon" src="../../assets/assetsTeacher/alunosIcon.png"></img>
                     <span class="text">Alunos</span>
                 </a>
-                <a href="lancarNotas.html" class="nav-item">
+                <a href="throwGrade.jsp" class="nav-item">
                     <img class="icon" src="../../assets/assetsTeacher/notasIcon.png"></img>
                     <span class="text">Notas</span>
                 </a>

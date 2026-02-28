@@ -166,8 +166,10 @@ body {
     width: 100%;
     max-width: 790px;
 }
-
-.search-container input {
+form{
+    display: flex;
+}
+.search-container input[type="number"] {
     width: 100%;
     margin: 0;
     padding: 14px 90px 14px 20px;

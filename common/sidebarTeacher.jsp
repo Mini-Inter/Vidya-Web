@@ -11,15 +11,15 @@
     <img class="line" src="<%=request.getContextPath()%>/assets/assetsTeacher/linha.png" alt="divisor">
 
     <nav class="nav-menu">
-        <a href="#" class="nav-item active">
+        <a href="homeTeacher" class="nav-item active">
             <img class="icon" src="<%=request.getContextPath()%>/assets/assetsTeacher/homeIcon.png">
             <span class="text">Home</span>
         </a>
-        <a href="meusAlunos.html" class="nav-item">
+        <a href="teacherStudents" class="nav-item">
             <img class="icon" src="<%=request.getContextPath()%>/assets/assetsTeacher/alunosIcon.png">
             <span class="text">Alunos</span>
         </a>
-        <a href="lancarNotas.html" class="nav-item">
+        <a href="updateGrade" class="nav-item">
             <img class="icon" src="<%=request.getContextPath()%>/assets/assetsTeacher/notasIcon.png">
             <span class="text">Notas</span>
         </a>
