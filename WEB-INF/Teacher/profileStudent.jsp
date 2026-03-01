@@ -34,7 +34,7 @@
                     <img class="icon" src="../../assets/assetsTeacher/notasIcon.png"></img>
                     <span class="text">Notas</span>
                 </a>
-                <a href="observacoes.html" class="nav-item">
+                <a href="reportsTeacher.jsp" class="nav-item">
                     <img class="icon" src="../../assets/assetsTeacher/obsIcon.png"></img>
                     <span class="text">Observações</span>
                 </a>

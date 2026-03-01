@@ -23,7 +23,7 @@
             <img class="icon" src="<%=request.getContextPath()%>/assets/assetsTeacher/notasIcon.png">
             <span class="text">Notas</span>
         </a>
-        <a href="observacoes.html" class="nav-item">
+        <a href="teacherReports?tab=showReports" class="nav-item">
             <img class="icon" src="<%=request.getContextPath()%>/assets/assetsTeacher/obsIcon.png">
             <span class="text">Observações</span>
         </a>
