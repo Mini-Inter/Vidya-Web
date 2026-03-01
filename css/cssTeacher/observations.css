@@ -290,25 +290,6 @@ textarea {
     gap: 15px;
 }
 
-/*.primary {*/
-/*    background: #35b7b7;*/
-/*    color: white;*/
-/*    border: none;*/
-/*    padding: 12px 25px;*/
-/*    border-radius: 15px;*/
-/*    cursor: pointer;*/
-/*    font-weight: 500;*/
-/*}*/
-
-/*.secondary {*/
-/*    background: #C8D1DC;*/
-/*    color: #194D71;*/
-/*    border: none;*/
-/*    padding: 12px 25px;*/
-/*    border-radius: 15px;*/
-/*    cursor: pointer;*/
-/*}*/
-
 .actions input[type="submit"],
 .actions input[type="reset"] {
     padding: 12px 25px;

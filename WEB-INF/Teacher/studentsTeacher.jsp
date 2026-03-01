@@ -35,7 +35,7 @@
             <%
                 for(Summary summary: students){
             %>
-                <a href="profileStudent.jsp" class="student-card-list">
+                <a href="studentGrades?student=<%=summary.getMatricula()%>" class="student-card-list">
                     <div class="card-content">
                         <h3><%=summary.getName()%></h3>
 
