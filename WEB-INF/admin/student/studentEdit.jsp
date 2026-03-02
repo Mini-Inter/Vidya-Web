@@ -45,7 +45,7 @@ List<Class> classes = (List<Class>)  session.getAttribute("classes");
                             </div>
                             <div class="form-group">
                                 <label for="name">Nome </label>
-                                <input type="text" id="name" name="name" value="Ana Souza" required>
+                                <input type="text" id="name" name="name" value="<%=student.getFull_name()%>" required>
                             </div>
 
                         </div>
@@ -53,11 +53,11 @@ List<Class> classes = (List<Class>)  session.getAttribute("classes");
                         <div class="form-row">  
                             <div class="form-group">
                                 <label for="phone">Telefone (com DDD) </label>
-                                <input type="tel" id="phone" name="phone" value="(11) 98888-9897" required>
+                                <input type="tel" id="phone" name="phone" value="<%=student.getPhone()%>" required>
                             </div>
                             <div class="form-group">
                                 <label for="birth">Data de nascimento </label>
-                                <input type="date" id="birth" name="birth" value="2009-04-17" required>
+                                <input type="date" id="birth" name="birth" value="<%=student.getBirth_date()%>" required>
                             </div>
 
                             
@@ -66,7 +66,7 @@ List<Class> classes = (List<Class>)  session.getAttribute("classes");
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email">Email </label>
-                                <input type="email" id="email" name="email" value="ana.souza@gmail.com" required>
+                                <input type="email" id="email" name="email" value="<%=student.getLogin()%>@vidya.org.br" required>
                             </div>   
 
                             <div class="form-group">
