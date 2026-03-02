@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    String error = String.valueOf(session.getAttribute("error"));
     String name = "";
     String email = "";
     String birth = "";
@@ -20,34 +19,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/cssLogin/cadastro.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cssLogin/cadastro.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Vidya - cadastro</title>
 </head>
 <body>
-    <%
-        if (!error.equals("null")) {
-    %>
-    <p style="color: red"><%=error%></p>
-    <%
-            session.setAttribute("error", null);
-        }
-    %>
     <div class="background">
 
         <div class="bolhas">
-            <img src="Inicio/imgs/bolha1.png" class="bolha bolha1">
-            <img src="Inicio/imgs/bolha2.png" class="bolha bolha2">
-            <img src="Inicio/imgs/bolha3.png" class="bolha bolha3">
-            <img src="Inicio/imgs/bolha4.png" class="bolha bolha4">
+            <img src="${pageContext.request.contextPath}/assets/imgs/bolha1.png" class="bolha bolha1">
+            <img src="${pageContext.request.contextPath}/assets/imgs/bolha2.png" class="bolha bolha2">
+            <img src="${pageContext.request.contextPath}/assets/imgs/bolha3.png" class="bolha bolha3">
+            <img src="${pageContext.request.contextPath}/assets/imgs/bolha4.png" class="bolha bolha4">
         </div>
 
         <div class="card">
 
             <div class="logo">
                 <img 
-                        src="${pageContext.request.contextPath}/Inicio/imgs/logoNav.png" alt="vidya logo">
+                        src="${pageContext.request.contextPath}/assets/imgs/logoNav.png" alt="vidya logo">
             </div>
 
             <h1>Comece agora!</h1>
@@ -55,7 +47,7 @@
                 Por favor, insira suas credenciais
             </p>
 
-            <form action="<%=request.getContextPath()%>/auth?type=signup&pre=false" method="post">
+            <form action="${pageContext.request.contextPath}/auth?type=signup&pre=false" method="post">
 
                 <div class="inputt">
                     <label for="name">Nome Completo:</label>
@@ -81,7 +73,7 @@
                     <label for="passwordConf">Confirme sua senha:</label>
                     <input value="<%=pc%>" name="passwordConf" id="passwordConf" type="password">
                 </div>
-
+                <%@include file="/common/erro.jsp"%>
                 <button type="submit">Cadastrar</button>
 
             </form>

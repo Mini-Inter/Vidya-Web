@@ -7,32 +7,33 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - CRUD</title>
-    <link rel="stylesheet" href="../css/crud.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cssAdmin/crud.css">
 </head>
 <%
-    String active = "students";
+    request.setAttribute("active", "students");
 
     List<Summary> students = (List<Summary>) session.getAttribute("students");
 %>
 <body>
     <div class="container">
 
-        <%@include file="../../../common/sidebarAdmin.jsp"%>
+        <%@include file="/common/sidebarAdmin.jsp"%>
 
         <main class="main-content">
             <h1>Alunos</h1>
             <h4>CRUD</h4>
             <div class="table-controls">
                 <div class="search-box">
-                    <img alt="" class="search-icon" src="../assets/pesquisar.png">
+                    <img alt="" class="search-icon" src="${pageContext.request.contextPath}/assets/AdminAssets/pesquisar.png">
                     <input type="text" class="search-input" placeholder="Buscar por nome">
                 </div>
-                <form action="<%=request.getContextPath()%>/adminStudents?type=createStudent" method="post" class="btn-adicionar">
-                    <img alt="" src="../assets/add.png" class="add-icon">
-                    <input type="submit" value="Adicionar">
-                </form>
+                <a href="${pageContext.request.contextPath}/adminStudents?type=create" class="btn-adicionar">
+                    <img alt="" src="${pageContext.request.contextPath}/assets/AdminAssets/add.png" class="add-icon">
+                   <span>Adicionar</span>
+                </a>
             </div>
 
             <div class="table-section">
@@ -76,17 +77,17 @@
                                 <td><%=student.getEmail()%></td>
                                 <td><%=student.getCreatedAt()%></td>
                                 <td class="actions">
-                                    <a class="btn-edit" href="studentEdit.jsp"></a>
-                                    <form class="btn-edit" action="<%=request.getContextPath()%>/adminStudents?type=editStudent" method="post">
+                                    <form action="${pageContext.request.contextPath}/adminStudents?type=edit" method="get">
+                                        <input name="type" value="edit" type="hidden">
                                         <input name="student" value="<%=student.getMatricula()%>" type="hidden">
-                                        <button type="submit">
-                                            <img src="../assets/editar.png">
+                                        <button class="btn-edit" type="submit">
+                                            <img alt="" src="${pageContext.request.contextPath}/assets/AdminAssets/editar.png">
                                         </button>
                                     </form>
-                                    <form action="<%=request.getContextPath()%>/adminStudents?type=deleteStudent" method="post">
+                                    <form action="${pageContext.request.contextPath}/adminStudents?type=delete" method="post">
                                         <input name="student" value="<%=student.getMatricula()%>" type="hidden">
                                         <button class="btn-delete" type="submit">
-                                            <img src="../assets/deletar.png">
+                                            <img src="${pageContext.request.contextPath}/assets/AdminAssets/deletar.png">
                                         </button>
                                     </form>
                                 </td>

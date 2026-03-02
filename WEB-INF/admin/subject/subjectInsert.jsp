@@ -2,17 +2,18 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - CRUD</title>
-    <link rel="stylesheet" href="../css/addEdit.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cssAdmin/addEdit.css">
 </head>
 <%
-    String active = "subjects";
+    request.setAttribute("active", "subjects");
 %>
 <body>
     <div class="container">
         
-        <%@include file="../../../common/sidebarAdmin.jsp"%>
+        <%@include file="/common/sidebarAdmin.jsp"%>
 
         <main class="main-content">
 
@@ -22,7 +23,7 @@
             <div class="form-add">
                 <div class="form-card">
 
-                    <form class="student-form">
+                    <form class="student-form" action="${pageContext.request.contextPath}/adminSubjects?type=insert" method="post">
 
                         <div class="form-row">
 
@@ -41,11 +42,9 @@
                             <button type="submit" class="btn btn-primary">
                                 <span>Adicionar</span>
                             </button>
-                            <form action="<%=request.getContextPath()%>/adminSubjects?type=noot">
-                                <button class="btn btn-secundary">
-                                    Cancelar
-                                </button>
-                            </form>
+                            <a href="${pageContext.request.contextPath}/adminSubjects?type=noot" class="btn btn-secundary">
+                                Cancelar
+                            </a>
                         </div>
                     </form>
                 </div>

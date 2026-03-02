@@ -7,12 +7,13 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - CRUD</title>
-    <link rel="stylesheet" href="../css/addEdit.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cssAdmin/addEdit.css">
 </head>
 <%
-    String active = "classes";
+    request.setAttribute("active", "classes");
     Class classroom = (Class) session.getAttribute("classroom");
 
     Teaching[] aulas = (Teaching[]) session.getAttribute("aulas");
@@ -22,7 +23,7 @@
 <body>
     <div class="container">
 
-        <%@include file="../../../common/sidebarAdmin.jsp"%>
+        <%@include file="/common/sidebarAdmin.jsp"%>
 
         <main class="main-content">
 
@@ -32,7 +33,7 @@
             <div class="form-add">
                 <div class="form-card">
 
-                    <form class="student-form" action="<%=request.getContextPath()%>/adminClasses?type=updateClass" method="post">
+                    <form class="student-form" action="${pageContext.request.contextPath}/adminClasses?type=update" method="post">
                         <input name="classroom" id="classroom" value="<%=classroom.getId()%>" type="hidden">
 
                         <div class="form-row">
@@ -120,7 +121,7 @@
                             <button type="submit" class="btn btn-primary">
                                 <span>Adicionar</span>
                             </button>
-                            <a href="<%=request.getContextPath()%>/adminClasses?type=noot" class="btn btn-secundary">Cancelar</a>
+                            <a href="${pageContext.request.contextPath}/adminClasses?type=noot" class="btn btn-secundary">Cancelar</a>
                         </div>
                     </form>
                 </div>

@@ -4,30 +4,31 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - CRUD</title>
-    <link rel="stylesheet" href="../css/crud.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cssAdmin/crud.css">
 </head>
 <%
-    String active = "reports";
+    request.setAttribute("active", "reports");
 
     List<CompleteReport> reports = (List<CompleteReport>) session.getAttribute("reports");
 %>
 <body>
     <div class="container">
 
-        <%@include file="../../../common/sidebarAdmin.jsp"%>
+        <%@include file="/common/sidebarAdmin.jsp"%>
 
         <main class="main-content">
             <h1>Observações</h1>
             <h4>CRUD</h4>
             <div class="table-controls">
                 <div class="search-box">
-                    <img class="search-icon" src="../assets/pesquisar.png">
+                    <img class="search-icon" src="${pageContext.request.contextPath}/assets/AdminAssets/pesquisar.png">
                     <input type="text" class="search-input" placeholder="Buscar por nome">
                 </div>
-                <a href="reportInsert.jsp" class="btn-adicionar">
-                    <img src="../assets/add.png" class="add-icon">
+                <a href="${pageContext.request.contextPath}/adminReports?type=create" class="btn-adicionar">
+                    <img src="${pageContext.request.contextPath}/assets/AdminAssets/add.png" class="add-icon">
                     <span>Adicionar</span>
                 </a>
             </div>
@@ -62,14 +63,17 @@
                                 <td><%=report.getType()%></td>
                                 <td><%=report.getSend_at()%></td>
                                 <td class="actions">
-                                    <form action="<%=request.getContextPath()%>/adminReports?type=editReport" method="post">
+                                    <form action="${pageContext.request.contextPath}/adminReports?type=edit" method="get">
+                                        <input name="type" value="edit" type="hidden">
+                                        <input name="report" value="<%=report.getId()%>" type="hidden">
                                         <button class="btn-edit" type="submit">
-                                            <img alt="" src="../assets/editar.png">
+                                            <img alt="" src="${pageContext.request.contextPath}/assets/AdminAssets/editar.png">
                                         </button>
                                     </form>
-                                    <form action="<%=request.getContextPath()%>/adminReports?type=deleteReport" method="post">
+                                    <form action="${pageContext.request.contextPath}/adminReports?type=delete" method="post">
+                                        <input name="report" value="<%=report.getId()%>" type="hidden">
                                         <button class="btn-delete" type="submit">
-                                            <img alt="" src="../assets/deletar.png">
+                                            <img alt="" src="${pageContext.request.contextPath}/assets/AdminAssets/deletar.png">
                                         </button>
                                     </form>
                                 </td>

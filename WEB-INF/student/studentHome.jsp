@@ -2,6 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     BasicInfo basicInfo = (BasicInfo) request.getAttribute("basicInfo");
+    request.setAttribute("active", "home");
     Integer amountSubjects = (Integer) request.getAttribute("amountSubjects");
     Double avgGrade = (Double) request.getAttribute("avgGrade");
     Integer amountReports = (Integer) request.getAttribute("amountReports");
@@ -9,6 +10,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - Aluno</title>
     <link rel="stylesheet"
@@ -16,7 +18,7 @@
 </head>
 <body>
     <div class="container">
-        <%@ include file="../../common/sidebarStudent.jsp"%>
+        <%@ include file="/common/sidebarStudent.jsp"%>
 
         <main class="main-content">
             <img class="welcome" src="${pageContext.request.contextPath}/assets/assetsStudent/mascote-pandinha.jpg"

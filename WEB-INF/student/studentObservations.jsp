@@ -3,12 +3,15 @@
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+    request.setAttribute("active", "observations");
+
     List<CompleteInformationReport> list =
             (List<CompleteInformationReport>) request.getAttribute("List");
 %>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - Aluno</title>
     <link rel="stylesheet"
@@ -17,7 +20,7 @@
 <body>
     <div class="container">
 
-        <%@ include file="../../common/sidebarStudent.jsp"%>
+        <%@ include file="/common/sidebarStudent.jsp"%>
 
 
         <main class="main-content">

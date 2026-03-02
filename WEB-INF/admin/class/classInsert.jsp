@@ -2,27 +2,27 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - CRUD</title>
-    <link rel="stylesheet" href="../css/addEdit.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cssAdmin/addEdit.css">
 </head>
 <%
-    String action = "classes";
+    request.setAttribute("active","classes");
 %>
 <body>
     <div class="container">
 
-        <%@include file="../../../common/sidebarAdmin.jsp"%>
+        <%@include file="/common/sidebarAdmin.jsp"%>
 
         <main class="main-content">
-
             <h1>Turma</h1>
             <h4>Adicionar nova classroom</h4>
 
             <div class="form-add">
                 <div class="form-card">
 
-                    <form class="student-form" action="<%=request.getContextPath()%>/adminClasses?type=classInsert">
+                    <form class="student-form" action="${pageContext.request.contextPath}/adminClasses?type=insert">
 
                         <div class="form-row">
                             <div class="form-group">
@@ -39,7 +39,7 @@
                             <button type="submit" class="btn btn-primary">
                                 <span>Adicionar</span>
                             </button>
-                            <a href="<%=request.getContextPath()%>/adminClasses?type=noot" class="btn btn-secundary">Cancelar</a>
+                            <a href="${pageContext.request.contextPath}/adminClasses?type=noot" class="btn btn-secundary">Cancelar</a>
                         </div>
                     </form>
                 </div>

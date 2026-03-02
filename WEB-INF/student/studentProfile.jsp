@@ -1,5 +1,7 @@
 <%@ page import="com.school.miniinter.models.Students.CompleteInfo" %>
 <%
+    request.setAttribute("active", "profile");
+
     CompleteInfo completeInfo = (CompleteInfo)
             request.getAttribute("completeInfoStudent");
 %>
@@ -7,6 +9,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - Aluno</title>
     <link rel="stylesheet"
@@ -14,7 +17,7 @@
 </head>
 <body>
     <div class="container">
-        <%@ include file="../../common/sidebarStudent.jsp"%>
+        <%@ include file="/common/sidebarStudent.jsp"%>
 
         <main class="main-content">
             <header class="page-header">
