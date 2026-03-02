@@ -34,11 +34,11 @@
             <img class="icon" src="<%=request.getContextPath()%>/assets/assetsTeacher/trocarIcon.png">
             <span class="text">Trocar disciplina</span>
         </a>
-        <a href="perfilProf.html" class="nav-item">
+        <a href="teacherProfile" class="nav-item">
             <img class="icon" src="<%=request.getContextPath()%>/assets/assetsTeacher/perfilbranco.png">
             <span class="text">Perfil</span>
         </a>
-        <a href="/index.jsp" class="nav-item logout">
+        <a href="logout?type=teacher" class="nav-item logout">
             <img class="icon" src="<%=request.getContextPath()%>/assets/assetsTeacher/sairIcon.png">
             <span class="text">Sair da conta</span>
         </a>

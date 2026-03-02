@@ -35,7 +35,7 @@
             <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/navbar-perfil.png">
             <span class="text">Perfil</span>
         </a>
-        <a href="#" class="nav-item logout">
+        <a href="logout?type=student" class="nav-item logout">
             <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/navbar-exit.png">
             <span class="text">Sair da conta</span>
         </a>

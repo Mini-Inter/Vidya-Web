@@ -65,24 +65,27 @@ password = String.valueOf(session.getAttribute("password"));
 
                 <p class="bottom-link">
                     Não tem uma conta?
-                    <a href="cadastro.jsp" id="abrirPopup">Cadastre-se</a>
+                    <a href="#" id="abrirPopup">Cadastre-se</a>
                 </p>
 
             </form>
 
             <div id="overlay" class="overlay">
                 <div class="popup">
-                    <h2>Crie sua conta</h2>
-                    <p>Insira o seu CPF:</p>
-                    <input type="text" placeholder="Digite seu CPF">
-                    <button id="continuarBtn">Continuar</button>
+                    <form action="<%=request.getContextPath()%>/auth?type=signup&pre=true" method="post">
+                        <h2>Crie sua conta</h2>
+                        <p>Insira o seu CPF:</p>
+                        <input type="text" placeholder="Digite seu CPF"
+                               name="cpf">
+                        <input type="submit" id="continuarBtn">
+                    </form>
                 </div>
             </div>
 
             <script>
                 const abrirPopup = document.getElementById("abrirPopup");
                 const overlay = document.getElementById("overlay");
-                const continuarBtn = document.getElementById("continuarBtn");
+                // const continuarBtn = document.getElementById("continuarBtn");
 
                 // Abrir popup
                 abrirPopup.addEventListener("click", function (e) {
@@ -98,9 +101,9 @@ password = String.valueOf(session.getAttribute("password"));
                 });
 
                 // Redirecionar ao clicar em Continuar
-                continuarBtn.addEventListener("click", function () {
-                    window.location.href = "auth?type=signup&pre=true";
-                });
+                // continuarBtn.addEventListener("click", function () {
+                //
+                // });
 
                 // Fechar com ESC
                 document.addEventListener("keydown", function (e) {

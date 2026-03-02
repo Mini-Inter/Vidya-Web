@@ -9,7 +9,7 @@
     if (session.getAttribute("name")!=null)
         name = String.valueOf(session.getAttribute("name"));
     if (session.getAttribute("email")!=null)
-        email = String.valueOf(session.getAttribute("email"));
+        email = session.getAttribute("email")+"@vidya.org.br";
     if (session.getAttribute("birth")!=null)
         birth = String.valueOf(session.getAttribute("birth"));
     if (session.getAttribute("pw")!=null)
@@ -21,7 +21,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/cssLogin/cadastro.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/cssLogin/cadastro.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Vidya - cadastro</title>
 </head>
@@ -37,17 +37,16 @@
     <div class="background">
 
         <div class="bolhas">
-            <img src="Inicio/imgs/bolha1.png" class="bolha bolha1">
-            <img src="Inicio/imgs/bolha2.png" class="bolha bolha2">
-            <img src="Inicio/imgs/bolha3.png" class="bolha bolha3">
-            <img src="Inicio/imgs/bolha4.png" class="bolha bolha4">
+            <img src="<%=request.getContextPath()%>/assets/imgs/bolha1.png" class="bolha bolha1">
+            <img src="<%=request.getContextPath()%>/assets/imgs/bolha2.png" class="bolha bolha2">
+            <img src="<%=request.getContextPath()%>/assets/imgs/bolha3.png" class="bolha bolha3">
+            <img src="<%=request.getContextPath()%>/assets/imgs/bolha4.png" class="bolha bolha4">
         </div>
 
         <div class="card">
 
             <div class="logo">
-                <img 
-                        src="${pageContext.request.contextPath}/Inicio/imgs/logoNav.png" alt="vidya logo">
+                <img src="<%=request.getContextPath()%>/assets/imgs/logoNav.png" alt="vidya logo">
             </div>
 
             <h1>Comece agora!</h1>

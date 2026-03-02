@@ -153,17 +153,10 @@
                             }
                         %>
                     </div>
-
                 </div>
-
             </div>
-
            <%@ include file="../../common/sidebarTeacherChangeSubject.jsp"%>
-
         </main>
-
-
-
 </body>
 
 </html>

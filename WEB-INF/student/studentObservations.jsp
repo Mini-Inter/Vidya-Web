@@ -1,10 +1,12 @@
 <%@ page
-        import="com.school.miniinter.models.Reports.CompleteInformationReport" %>
+        import="com.school.miniinter.models.Reports.CompleteInformationReportStudent" %>
 <%@ page import="java.util.List" %>
+<%@ page
+        import="com.school.miniinter.models.Reports.CompleteInformationReportStudent" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    List<CompleteInformationReport> list =
-            (List<CompleteInformationReport>) request.getAttribute("List");
+    List<CompleteInformationReportStudent> list =
+            (List<CompleteInformationReportStudent>) request.getAttribute("List");
 %>
 <html lang="pt-BR">
 <head>
@@ -39,7 +41,7 @@
             <div class="observations-list">
 
                 <%
-                    for(CompleteInformationReport c: list){%>
+                    for(CompleteInformationReportStudent c: list){%>
                 <div class="observation-card">
                     <div class="observation-left">
                         <div class="left-line"></div>
