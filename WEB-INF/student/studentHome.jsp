@@ -23,11 +23,6 @@
         <main class="main-content">
             <img class="welcome" src="${pageContext.request.contextPath}/assets/assetsStudent/mascote-pandinha.jpg"
                  alt="foto mascote vidya">
-            <h1>Informações básicas</h1>
-            <p>Turma: <%=basicInfo.getSeries()%>°<%=basicInfo.getClassroom()%></p>
-            <p>Total de matérias: <%=request.getAttribute("amountSubjects")%></p>
-            <p>Média total: <%=request.getAttribute("avgGrade")%></p>
-            <p>Total de observações: <%=request.getAttribute("amountReports")%></p>
 
             <header class="page-header">
                 <h1>Olá, <%=basicInfo.getFirst_name()%></h1>

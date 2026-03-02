@@ -1,4 +1,5 @@
 <%@ page import="com.school.miniinter.models.Students.CompleteInfo" %>
+<%@ page import="com.school.miniinter.models.Grades.SimpleGrade" %>
 <%
     request.setAttribute("active", "profile");
 
@@ -26,9 +27,21 @@
 
             <div class="profile-card">
                 <div class="profile-photo">
-                    <div class="photo-placeholder">
-                        Foto
-                    </div>
+                    <form action="uploadImage"
+                          method="post" enctype="multipart/form-data">
+                        <label class="photo-placeholder" for="updateImage">
+                        <%
+                            if(completeInfo.getUrlImage() != null){%>
+                        <img src="<%=completeInfo.getUrlImage()%>" alt="sua imagem">
+                            <%}
+                        %>
+                        </label>
+                        <input type="hidden" name="type" value="student">
+                        <input type="file" name="image" accept="image/*"
+                               onchange="this.form.submit()" id="updateImage"
+                               value="Editar foto" hidden>
+
+                    </form>
                 </div>
 
                 <div class="profile-info">
@@ -101,13 +114,14 @@
                                 class="personal-info-value">(<%=completeInfo.getPhone().substring(0,2)%>)
                             <%=completeInfo.getPhone().substring(2,11)%></div>
                     </div>
-<%--                    <div class="personal-info-item">--%>
-<%--                        <div class="personal-info-label">--%>
-<%--                            <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/local.png">--%>
-<%--                            <span>ENDEREÇO</span>--%>
-<%--                        </div>--%>
-<%--                        <div class="personal-info-value">São Paulo - SP</div>--%>
-<%--                    </div>--%>
+                    <div class="personal-info-item">
+                        <div class="personal-info-label">
+                            <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/local.png">
+                            <span>ENDEREÇO</span>
+                        </div>
+                        <div
+                                class="personal-info-value"><%=completeInfo.getFormated_address()%></div>
+                    </div>
                 </div>
             </div>
         </main>

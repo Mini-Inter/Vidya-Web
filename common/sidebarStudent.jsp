@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: lorenzooliveira-ieg
-  Date: 25/02/2026
-  Time: 21:05
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <aside class="sidebar">
     <div class="logo">
@@ -41,7 +34,7 @@
             <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/navbar-perfil.png">
             <span class="text">Perfil</span>
         </a>
-        <a href="${pageContext.request.contextPath}/Inicio/login.jsp" class="nav-item logout">
+        <a href="logout?type=student" class="nav-item logout">
             <img class="icon" src="${pageContext.request.contextPath}/assets/assetsStudent/navbar-exit.png">
             <span class="text">Sair da conta</span>
         </a>

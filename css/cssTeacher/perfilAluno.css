@@ -255,10 +255,6 @@ body {
   border-radius: 2px;
 }
 
-.tab-content {
-  display: none;
-  padding: 20px 0;
-}
 
 #notas:checked ~ .content .content-notas {
   display: block;

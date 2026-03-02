@@ -56,7 +56,7 @@ password = String.valueOf(session.getAttribute("password"));
 
                 <p class="bottom-link">
                     Não tem uma conta?
-                    <a href="cadastro.jsp" id="abrirPopup">Cadastre-se</a>
+                    <a href="#" id="abrirPopup">Cadastre-se</a>
                 </p>
 
             </form>
@@ -75,6 +75,7 @@ password = String.valueOf(session.getAttribute("password"));
             <script>
                 const abrirPopup = document.getElementById("abrirPopup");
                 const overlay = document.getElementById("overlay");
+                // const continuarBtn = document.getElementById("continuarBtn");
 
                 // Abrir popup
                 abrirPopup.addEventListener("click", function (e) {
@@ -88,6 +89,11 @@ password = String.valueOf(session.getAttribute("password"));
                         overlay.classList.remove("active");
                     }
                 });
+
+                // Redirecionar ao clicar em Continuar
+                // continuarBtn.addEventListener("click", function () {
+                //
+                // });
 
                 // Fechar com ESC
                 document.addEventListener("keydown", function (e) {

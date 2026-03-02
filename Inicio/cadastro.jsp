@@ -8,7 +8,7 @@
     if (session.getAttribute("name")!=null)
         name = String.valueOf(session.getAttribute("name"));
     if (session.getAttribute("email")!=null)
-        email = String.valueOf(session.getAttribute("email"));
+        email = session.getAttribute("email")+"@vidya.org.br";
     if (session.getAttribute("birth")!=null)
         birth = String.valueOf(session.getAttribute("birth"));
     if (session.getAttribute("pw")!=null)
@@ -38,8 +38,7 @@
         <div class="card">
 
             <div class="logo">
-                <img 
-                        src="${pageContext.request.contextPath}/assets/imgs/logoNav.png" alt="vidya logo">
+                <img src="${pageContext.request.contextPath}/assets/imgs/logoNav.png" alt="vidya logo">
             </div>
 
             <h1>Comece agora!</h1>

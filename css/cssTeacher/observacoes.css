@@ -188,11 +188,6 @@ input[type="radio"] {
     border: none;
 }
 
-.tab-content {
-    display: none;
-    margin-top: 20px;
-}
-
 #criar:checked ~ .content .criar {
     display: block;
 }
@@ -250,7 +245,11 @@ select {
     margin-bottom: 10px;
 }
 
-.tipo-buttons button {
+.tipo-buttons input[type="radio"]{
+    display: none;
+}
+
+.tipo-buttons label {
     flex: 1;
     padding: 10px;
     border-radius: 12px;
@@ -259,9 +258,17 @@ select {
     cursor: pointer;
     font-weight: 500;
     transition: 0.3s;
+    text-align: center;
 }
 
-.tipo-buttons button:hover {
+.tipo-buttons label:hover {
+    background: #35b7b7;
+    color: white;
+    border: none;
+    text-align: center;
+}
+
+.tipo-buttons input[type="radio"]:checked + label {
     background: #35b7b7;
     color: white;
     border: none;
@@ -283,23 +290,51 @@ textarea {
     gap: 15px;
 }
 
-.primary {
-    background: #35b7b7;
-    color: white;
-    border: none;
+/*.primary {*/
+/*    background: #35b7b7;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 12px 25px;*/
+/*    border-radius: 15px;*/
+/*    cursor: pointer;*/
+/*    font-weight: 500;*/
+/*}*/
+
+/*.secondary {*/
+/*    background: #C8D1DC;*/
+/*    color: #194D71;*/
+/*    border: none;*/
+/*    padding: 12px 25px;*/
+/*    border-radius: 15px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+.actions input[type="submit"],
+.actions input[type="reset"] {
     padding: 12px 25px;
     border-radius: 15px;
     cursor: pointer;
     font-weight: 500;
+    border: none;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #35b7b7;
+    color: white;
+}
+
+.primary:hover {
+    background: #2aa3a3;
 }
 
 .secondary {
     background: #C8D1DC;
     color: #194D71;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 15px;
-    cursor: pointer;
+}
+
+.secondary:hover {
+    background: #b5bec8;
 }
 
 .observations-list {
