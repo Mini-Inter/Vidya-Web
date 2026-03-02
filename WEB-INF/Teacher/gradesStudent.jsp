@@ -5,6 +5,7 @@
 <%@ page import="java.time.LocalDate" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+    request.setAttribute("active", "grade");
     List<Subject> subjects = (List<Subject>) session.getAttribute("subjects");
     int idSubject = (Integer) session.getAttribute("subject");
 

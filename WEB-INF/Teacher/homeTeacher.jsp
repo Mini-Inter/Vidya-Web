@@ -5,6 +5,7 @@
 <%@ page import="com.school.miniinter.dao.SubjectsDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+    request.setAttribute("active", "home");
     SubjectsDAO subjectsDAO = new SubjectsDAO();
     HomeTeacherInfo homeTeacherInfo =
             (HomeTeacherInfo) request.getAttribute("homeTeacherInfo");

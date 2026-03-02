@@ -3,6 +3,7 @@
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+    request.setAttribute("active", "profile");
     CompleteInfo completeInfo =
             (CompleteInfo) request.getAttribute("completeInfoTeacher");
     List<AmountStudentByTeacher> amountStudentByClass =

@@ -11,19 +11,19 @@
     <img class="line" src="<%=request.getContextPath()%>/assets/assetsTeacher/linha.png" alt="divisor">
 
     <nav class="nav-menu">
-        <a href="homeTeacher" class="nav-item active">
+        <a href="homeTeacher" class="nav-item ${active == "home" ? "active" : ""}">
             <img class="icon" src="<%=request.getContextPath()%>/assets/assetsTeacher/homeIcon.png">
             <span class="text">Home</span>
         </a>
-        <a href="teacherStudents" class="nav-item">
+        <a href="teacherStudents" class="nav-item ${active == "student" ? "active" : ""}">
             <img class="icon" src="<%=request.getContextPath()%>/assets/assetsTeacher/alunosIcon.png">
             <span class="text">Alunos</span>
         </a>
-        <a href="updateGrade" class="nav-item">
+        <a href="updateGrade" class="nav-item ${active == "grade" ? "active" : ""}">
             <img class="icon" src="<%=request.getContextPath()%>/assets/assetsTeacher/notasIcon.png">
             <span class="text">Notas</span>
         </a>
-        <a href="teacherReports?tab=showReports" class="nav-item">
+        <a href="teacherReports?tab=showReports" class="nav-item ${active == "report" ? "active" : ""}">
             <img class="icon" src="<%=request.getContextPath()%>/assets/assetsTeacher/obsIcon.png">
             <span class="text">Observações</span>
         </a>

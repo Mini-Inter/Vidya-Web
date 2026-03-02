@@ -5,6 +5,7 @@
 <%@ page import="java.util.LinkedList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+    request.setAttribute("active", "report");
     List<CompleteInformationReportTeacher> list =
             (List<CompleteInformationReportTeacher>) session.getAttribute("reports");
     LinkedList<Subject> subjects = (LinkedList<Subject>)

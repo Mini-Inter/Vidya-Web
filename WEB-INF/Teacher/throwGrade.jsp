@@ -5,6 +5,7 @@
 <%@ page import="java.util.LinkedList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+    request.setAttribute("active", "student");
     List<Class> listClass = (List<Class>) request.getAttribute("listClass");
     Integer idClass = (Integer) request.getAttribute("id_class");
     List<GradeForStudent> listGradeByStudent = (List<GradeForStudent>)

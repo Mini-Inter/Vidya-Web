@@ -3,6 +3,7 @@
 <%@ page import="com.school.miniinter.models.Subject.Subject" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+    request.setAttribute("active", "student");
     List<Summary> students = (List<Summary>) session.getAttribute("students");
     List<Subject> subjects = (List<Subject>) session.getAttribute("subjects");
 %>
