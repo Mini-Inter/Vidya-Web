@@ -6,7 +6,6 @@
 
     List<GradeForSubject> gradeForSubjects = (List<GradeForSubject>) request.getAttribute("GradeCard");
 %>
-<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">

@@ -4,7 +4,7 @@
 <%@ page import="com.school.miniinter.models.PreRegistration.PreRegistration" %>
 <%@ page import="com.school.miniinter.models.Students.Students" %>
 <%@ page import="com.school.miniinter.models.Students.Summary" %>
-<html lang="pt-BR">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">

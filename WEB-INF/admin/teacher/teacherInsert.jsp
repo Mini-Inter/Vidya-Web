@@ -43,7 +43,7 @@
                             </div>
                             <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="Ex: usuario@gmail.com" required>
+                                    <input type="email" id="email" name="email" placeholder="Ex: usuario@vidya.org.br" required>
                             </div>
                         </div>
 

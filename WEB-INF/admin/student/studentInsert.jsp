@@ -2,7 +2,7 @@
 <%@ page import="com.school.miniinter.models.Class.Class" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.school.miniinter.models.PreRegistration.PreRegistration" %>
-<html lang="pt-BR">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
