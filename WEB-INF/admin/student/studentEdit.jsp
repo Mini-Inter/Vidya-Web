@@ -1,12 +1,16 @@
 <%@ page import="com.school.miniinter.models.Students.Students" %>
 <%@ page import="com.school.miniinter.models.Class.Class" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.sql.Date" %>
+<%@ page import="java.text.DateFormat" %>
+<%@ page import="java.util.Locale" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - CRUD</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/geral/link.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cssAdmin/addEdit.css">
 </head>
 <%
@@ -14,6 +18,10 @@ request.setAttribute("active", "students");
 Students student = (Students) session.getAttribute("student");
 
 List<Class> classes = (List<Class>)  session.getAttribute("classes");
+    DateFormat format = DateFormat.getDateInstance(DateFormat.DEFAULT,
+            new Locale("pt","BR"));
+    java.util.Date utilDate = format.parse(student.getBirth_date());
+    Date date = new Date(utilDate.getTime());
 %>
 <body>
     <div class="container">
@@ -57,7 +65,8 @@ List<Class> classes = (List<Class>)  session.getAttribute("classes");
                             </div>
                             <div class="form-group">
                                 <label for="birth">Data de nascimento </label>
-                                <input type="date" id="birth" name="birth" value="<%=student.getBirth_date()%>" required>
+                                <input type="date" id="birth" name="birth"
+                                       value="<%=date%>" required>
                             </div>
 
                             

@@ -1,4 +1,7 @@
 <%@ page import="com.school.miniinter.models.Guardian.Guardian" %>
+<%@ page import="java.text.DateFormat" %>
+<%@ page import="java.util.Locale" %>
+<%@ page import="java.util.Date" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="pt-BR">
 <head>
@@ -6,12 +9,17 @@
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - CRUD</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/geral/link.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cssAdmin/addEdit.css">
 </head>
 <%
     request.setAttribute("active", "guardians");
 
     Guardian guardian = (Guardian) session.getAttribute("guardian");
+    DateFormat format = DateFormat.getDateInstance(DateFormat.DEFAULT,
+            new Locale("pt","BR"));
+    Date utilDate = format.parse(guardian.getBirthDate());
+    java.sql.Date date = new java.sql.Date(utilDate.getTime());
 %>
 <body>
     <div class="container">
@@ -36,7 +44,7 @@
                             </div>
                             <div class="form-group">
                                     <label for="datanascimento">Data de nascimento</label>
-                                    <input type="date" id="datanascimento" name="datanascimento" value="<%=guardian.getBirthDate()%>" required>
+                                    <input type="date" id="datanascimento" name="datanascimento" value="<%=date%>" required>
                             </div>
                         </div>
 

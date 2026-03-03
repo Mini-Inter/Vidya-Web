@@ -13,6 +13,8 @@
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - Aluno</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/geral/link.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/geral/link.css">
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/css/cssStudent/home.css">
 </head>
@@ -72,7 +74,7 @@
             <section class="quick-access">
                 <h3>Acesso rápido</h3>
                 <div class="quick-cards">
-                    <a href="studentSubjects">
+                    <a href="studentSubjects" class="cards-link">
                         <div class="quick-card">
                             <img class="quick-icon" src="${pageContext.request.contextPath}/assets/assetsStudent/card-disciplinas.jpg">
                             <h4>Disciplinas</h4>
@@ -80,7 +82,7 @@
                         </div>
                     </a>
 
-                    <a href="gradeCard">
+                    <a href="gradeCard" class="cards-link">
                         <div class="quick-card">
                             <img class="quick-icon" src="${pageContext.request.contextPath}/assets/assetsStudent/card-notas.jpg">
                             <h4>Boletim</h4>
@@ -88,7 +90,7 @@
                         </div>
                     </a>
 
-                    <a href="observations">
+                    <a href="observations" class="cards-link">
                         <div class="quick-card">
                             <img class="quick-icon" src="${pageContext.request.contextPath}/assets/assetsStudent/card-observacoes.jpg">
                             <h4>Observações</h4>

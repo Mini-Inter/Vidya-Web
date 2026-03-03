@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/cssTeacher/studentsTeacher.css">
     <title>Vidya - Professor</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/geral/link.css">
 </head>
 
 <body>

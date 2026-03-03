@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="shortcut icon" href="assets/imgs/vidya.svg" type="image/x-icon">
     <title>Vidya</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/geral/link.css">
 </head>
 <body>
     <section class="landing">

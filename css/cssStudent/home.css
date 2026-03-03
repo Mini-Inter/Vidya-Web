@@ -10,6 +10,10 @@
 
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: var(--branco);
     margin: 0;
@@ -306,5 +310,13 @@ body {
     color: #999;
     font-size: 12px;
     line-height: 1.5;
+}
+
+.cards-link,
+.cards-link:visited,
+.cards-link:hover,
+.cards-link:active {
+    text-decoration: none;
+    color: inherit;
 }
 

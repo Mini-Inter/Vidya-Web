@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - CRUD</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/geral/link.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cssAdmin/crud.css">
 </head>
 <%
@@ -71,11 +72,11 @@
                                 <td class="actions">
                                     <form action="${pageContext.request.contextPath}/adminTeachers?type=edit" method="get">
                                         <input name="type" value="edit" type="hidden">
-                                        <input name="subject" value="<%=teacher.getId()%>" type="hidden">
+                                        <input name="teacher" value="<%=teacher.getId()%>" type="hidden">
                                         <button class="btn-edit" type="submit"><img alt="" src="${pageContext.request.contextPath}/assets/AdminAssets/editar.png"></button>
                                     </form>
                                     <form action="${pageContext.request.contextPath}/adminTeachers?type=delete" method="post">
-                                        <input name="subject" value="<%=teacher.getId()%>" type="hidden">
+                                        <input name="teacher" value="<%=teacher.getId()%>" type="hidden">
                                         <button class="btn-delete">
                                             <img alt="" src="${pageContext.request.contextPath}/assets/AdminAssets/deletar.png">
                                         </button>
