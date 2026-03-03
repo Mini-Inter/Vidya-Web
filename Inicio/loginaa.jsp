@@ -13,18 +13,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
+<link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cssLogin/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Vidya - login</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/geral/link.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/geral/default.css">
 </head>
 
 <body>
 <div class="background">
 
     <div class="bolhas">
+        <a href="<%=request.getContextPath()%>/index.jsp">
+            <div class="voltar">
+                <img src="${pageContext.request.contextPath}/assets/imgs/arrow-left.png" alt="botão voltar" width="50px" height="50px">
+            </div>
+        </a>
         <img src="${pageContext.request.contextPath}/assets/imgs/bolha1.png" class="bolha bolha1">
         <img src="${pageContext.request.contextPath}/assets/imgs/bolha2.png" class="bolha bolha2">
         <img src="${pageContext.request.contextPath}/assets/imgs/bolha3.png" class="bolha bolha3">

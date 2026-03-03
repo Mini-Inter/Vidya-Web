@@ -17,9 +17,10 @@
 
 <head>
     <meta charset="UTF-8">
+<link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/imgs/vidya.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - Professor</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/geral/link.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/geral/default.css">
     <link rel="stylesheet"
           href="<%=request.getContextPath()%>/css/cssTeacher/homeProf.css">
 </head>

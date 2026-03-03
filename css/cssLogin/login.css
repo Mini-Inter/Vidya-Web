@@ -32,6 +32,11 @@ body {
     z-index: 0;
 }
 
+.voltar{
+    padding-top: 80px;
+    padding-left: 50px;
+}
+
 .bolha {
     position: absolute;
     opacity: 0.5;
