@@ -35,7 +35,7 @@
                 <div class="form-card">
 
                     <form class="student-form" action="${pageContext.request.contextPath}/adminTeachers?type=update" method="post">
-
+                        <input type="hidden" name="teacher" value="<%=teacher.getId()%>">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Nome completo</label>

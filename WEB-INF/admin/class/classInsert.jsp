@@ -23,7 +23,7 @@
             <div class="form-add">
                 <div class="form-card">
 
-                    <form class="student-form" action="${pageContext.request.contextPath}/adminClasses?type=insert">
+                    <form class="student-form" action="${pageContext.request.contextPath}/adminClasses?type=insert" method="post">
 
                         <div class="form-row">
                             <div class="form-group">

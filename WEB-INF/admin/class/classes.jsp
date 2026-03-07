@@ -60,7 +60,7 @@
                                 <td><%=classroom.getId()%></td>
                                 <td><%=classroom.getSeries()%>º Ano</td>
                                 <td><%=classroom.getClassroom()%></td>
-                                <td><%=classroom.getId()%></td>
+                                <td><%=classroom.getAcademic_year()%></td>
                                 <td class="actions">
                                     <form action="${pageContext.request.contextPath}/adminClasses?type=edit" method="get">
                                         <input name="type" value="edit" type="hidden">

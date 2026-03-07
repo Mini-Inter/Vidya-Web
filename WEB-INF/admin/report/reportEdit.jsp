@@ -1,6 +1,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.school.miniinter.models.Reports.Reports" %>
 <%@ page import="com.school.miniinter.models.Students.Students" %>
+<%@ page import="com.school.miniinter.models.Teacher.Teacher" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="pt-BR">
 <head>
@@ -16,7 +17,9 @@
     Reports reports = (Reports) session.getAttribute("report");
 
     List<Students> students = (List<Students>) session.getAttribute("students");
-    String[] students_report = (String[]) session.getAttribute("students_report");
+    String[] students_report = (String[])
+            session.getAttribute("students_report");
+    List<Teacher> teachers = (List<Teacher>) session.getAttribute("teachers");
 %>
 <body>
     <div class="container">
@@ -32,7 +35,7 @@
                 <div class="form-card">
 
                     <form class="student-form" action="${pageContext.request.contextPath}/adminReports?type=update" method="post">
-
+                        <input type="hidden" name="report" value="<%=reports.getId()%>">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="students">Aluno(s)</label>
@@ -59,15 +62,38 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="description">Descrição </label>
-                                <input type="text" id="description" name="description" value="<%=reports.getDescription()%>" required>
+                                <label for="teacher">Professor </label>
+                                <select id="teacher"
+                                        name="teacher">
+                                    <%
+                                        for (Teacher teacher : teachers) {
+                                            if(reports.getFk_teachers() ==
+                                                    teacher.getId()) {
+                                    %>
+                                    <option selected
+                                            value="<%=teacher.getId()%>"><%=teacher.getName()%></option>
+                                    <%
+                                    }
+                                        else{
+                                    %>
+                                    <option value="<%=teacher.getId()%>"><%=teacher.getName()%></option>
+                                    <%
+                                            }
+                                        }
+                                    %>
+                                </select>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="type">Tipo </label>
-                                <input type="text" id="type" name="type" value="<%=reports.getType()%>" required>
+                                <label for="typeReport">Tipo </label>
+                                <input type="text" id="typeReport"
+                                       name="typeReport" value="<%=reports.getType()%>" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Descrição </label>
+                                <input type="text" id="description" name="description" value="<%=reports.getDescription()%>" required>
                             </div>
                         </div>
 

@@ -39,12 +39,13 @@
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="nome">Nome</label>
-                                <input type="text" id="nome" name="nome" value="<%=guardian.getName()%>" required>
+                                <label for="name">Nome</label>
+                                <input type="text" id="name" name="name"
+                                       value="<%=guardian.getName()%>" required>
                             </div>
                             <div class="form-group">
-                                    <label for="datanascimento">Data de nascimento</label>
-                                    <input type="date" id="datanascimento" name="datanascimento" value="<%=date%>" required>
+                                    <label for="birth">Data de nascimento</label>
+                                    <input type="date" id="birth" name="birth" value="<%=date%>" required>
                             </div>
                         </div>
 

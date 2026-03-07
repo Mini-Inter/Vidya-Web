@@ -72,7 +72,8 @@ password = String.valueOf(session.getAttribute("password"));
                     <form action="${pageContext.request.contextPath}/auth?type=signup&pre=true" method="post">
                         <h2>Crie sua conta</h2>
                         <p>Insira o seu CPF:</p>
-                        <input type="text" placeholder="Digite seu CPF">
+                        <input type="text" placeholder="Digite seu CPF"
+                               name="cpf">
                         <button id="continuarBtn">Continuar</button>
                     </form>
                 </div>

@@ -37,7 +37,6 @@
                             <div class="form-group">
                                 <label for="students">Aluno(s)</label>
                                 <select name="students" id="students" multiple size="1">
-                                    <option value="" disabled selected>Selecione um aluno</option>
                                     <%
                                         for (Students student : listStudents) {
                                     %>
@@ -68,8 +67,8 @@
                                 <input type="text" id="description" name="description" placeholder="Ex: Isepe fez um ótimo trabalho" required>
                             </div>
                             <div class="form-group">
-                                <label for="type">Tipo </label>
-                                <input type="text" id="type" name="type" placeholder="Ex: Elogio" required>
+                                <label for="classification">Tipo </label>
+                                <input type="text" id="classification" name="classification" placeholder="Ex: Elogio" required>
                             </div>
                         </div>
 
