@@ -24,10 +24,10 @@
             <h1>Professores</h1>
             <h4>CRUD</h4>
             <div class="table-controls">
-                <div class="search-box">
+                <form class="search-box" action="${pageContext.request.contextPath}/adminTeachers?type=noot" method="get">
                     <img alt="" class="search-icon" src="${pageContext.request.contextPath}/assets/AdminAssets/pesquisar.png">
-                    <input type="text" class="search-input" placeholder="Buscar por nome">
-                </div>
+                    <input name="search" id="search" type="text" class="search-input" placeholder="Buscar por nome">
+                </form>
                 <a href="${pageContext.request.contextPath}/adminTeachers?type=create" class="btn-adicionar">
                     <img src="${pageContext.request.contextPath}/assets/AdminAssets/add.png" class="add-icon">
                     <span>Adicionar</span>
