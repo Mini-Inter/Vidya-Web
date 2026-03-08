@@ -49,7 +49,7 @@ password = String.valueOf(session.getAttribute("password"));
             <form action="${pageContext.request.contextPath}/auth?type=login" method="post">
 
                 <div class="inputt">
-                    <label for="login">Email</label>
+                    <label for="login">Email:</label>
                     <input value="<%=login%>" required name="login" id="login" type="text">
                 </div>
 
@@ -63,6 +63,9 @@ password = String.valueOf(session.getAttribute("password"));
                 <p class="bottom-link">
                     Não tem uma conta?
                     <a href="#" id="abrirPopup">Cadastre-se</a>
+                </p>
+                <p class="bottom-link">
+                    <a href="${pageContext.request.contextPath}/Inicio/password.jsp" id="forgot">Esqueci minha senha</a>
                 </p>
 
             </form>
