@@ -68,8 +68,8 @@
                             %>
                             <tr>
                                 <td><%=student.getMatricula()%></td>
-                                <td><%=student.getSeries()%>°<%=student.getClassroom()%></td>
-                                <td><%=student.getGuardian()%></td>
+                                <td><%if(student.getSeries() == ' '){%>-<%}else{%><%=student.getSeries()%>°<%=student.getClassroom()%><%}%></td>
+                                <td><%if(student.getGuardian().isEmpty()) {%>-<%}else{%><%=student.getGuardian()%><%}%></td>
                                 <td><%=student.getName()%></td>
                                 <td><%=student.getFirstName()%></td>
                                 <td><%=student.getLastName()%></td>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidya - CRUD</title>
+    <link rel="stylesheet" href="addEdit.css">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <div class="logo">
+            <img class="logo-icon" src="./assets/Vydia-logo.jpg"></img>
+            <div class="logo-text">
+                <h1>vidya</h1>
+                <p>Plataforma escolar</p>
+            </div>
+        </div>
+
+        <img class="line" src="./assets/navbar-linha.png" alt="divisor">
+
+        <nav class="nav-menu">
+            <a href="./aluno.html" class="nav-item active">
+                <img class="icon" src="./assets/navbar-aluno.png"></img>
+                <span class="text">Alunos</span>
+            </a>
+            <a href="./professor.html" class="nav-item">
+                <img class="icon" src="./assets/navbar-prof.png"></img>
+                <span class="text">Professores</span>
+            </a>
+            <a href="./materia.html" class="nav-item">
+                <img class="icon" src="./assets/navbar-disciplinas.png"></img>
+                <span class="text">Matérias</span>
+            </a>
+            <a href="./turma.html" class="nav-item ">
+                <img class="icon" src="./assets/navbar-turma.png"></img>
+                <span class="text">Turmas</span>
+            </a>
+            <a href="./observacoes.html" class="nav-item ">
+                <img class="icon" src="./assets/navbar-observacoes.png"></img>
+                <span class="text">Observações</span>
+            </a>
+            <a href="./responsaveis.html" class="nav-item ">
+                <img class="icon" src="./assets/navbar-responsaveis.png"></img>
+                <span class="text">Responsáveis</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="/Inicio/index.html" class="nav-item logout">
+                <img class="icon" src="./assets/navbar-exit.png"></img>
+                <span class="text">Sair da conta</span>
+            </a>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <h1>Pré registro</h1>
+        <h4>Adicionar novo pré registro</h4>
+
+        <div class="form-add">
+            <div class="form-card">
+
+                <form class="student-form">
+
+                    <div class="form-preregistror">
+                        <div class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" name="cpf" placeholder="234.456.678-98" required>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <span>Adicionar</span>
+                        </button>
+                        <a href="./aluno.html" class="btn btn-secundary">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

@@ -71,7 +71,8 @@
                                             <img alt="" src="${pageContext.request.contextPath}/assets/AdminAssets/editar.png">
                                         </button>
                                     </form>
-                                    <form action="${pageContext.request.contextPath}/admin">
+                                    <form
+                                            action="${pageContext.request.contextPath}/adminGuardians?type=delete" method="post">
                                         <input name="guardian" value="<%=guardian.getId()%>" type="hidden">
                                         <button type="submit" class="btn-delete"><img src="${pageContext.request.contextPath}/assets/AdminAssets/deletar.png"></button>
                                     </form>

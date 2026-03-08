@@ -59,7 +59,8 @@
                             %>
                             <tr>
                                 <td><%=report.getId()%></td>
-                                <td><%=report.getTeacher()%></td>
+                                <td><%if(report.getTeacher() == null){%>-
+                                    <%}else{%><%=report.getTeacher()%><%}%></td>
                                 <td><%=report.getDescription()%></td>
                                 <td><%=report.getType()%></td>
                                 <td><%=report.getSend_at()%></td>

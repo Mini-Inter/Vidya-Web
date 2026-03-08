@@ -48,11 +48,12 @@
                             </div>
                         </div>
                         <%
+                            System.out.println(aulas);
                             for (int n = 0; n < 6; n++) {
+                                if(aulas != null){
                         %>
                         <div class="form-disciplines">
-                            <input <%if(aulas[n].getIdTeaching() != null){%>value
-                                           ="<%=aulas[n].getIdTeaching()%>"<%}%> name="aula<%=n%>Id" type="hidden">
+                            <input <%if(aulas[n].getIdTeaching() != null){%>value="<%=aulas[n].getIdTeaching()%>"<%}%> name="aula<%=n%>Id" type="hidden">
                             <div class="form-group">
                                 <label for="aula<%=n%>Subject">Matéria</label>
                                 <select name="aula<%=n%>Subject" id="aula<%=n%>Subject">
@@ -116,6 +117,7 @@
                             </div>
                         </div>
                         <%
+                                }
                             }
                         %>
                         <div class="form-actions">

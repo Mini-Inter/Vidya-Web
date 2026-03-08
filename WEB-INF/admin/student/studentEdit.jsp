@@ -44,11 +44,13 @@ List<Class> classes = (List<Class>)  session.getAttribute("classes");
                                     <option value="" disabled >Selecione uma classroom</option>
                                     <%
                                     for (Class classroom : classes) {
+                                        if(classroom.getId() == student.getFk_class()){
                                     %>
-                                    <option value="<%=classroom.getId()%>"><%=classroom.getSeries()%>°<%=classroom.getClassroom()%></option>
+                                    <option selected value="<%=classroom.getId()%>"><%=classroom.getSeries()%>°<%=classroom.getClassroom()%></option>
                                     <%
-                                    }
-                                    %>
+                                    }else{%>
+                                    <option value="<%=classroom.getId()%>"><%=classroom.getSeries()%>°<%=classroom.getClassroom()%></option>
+                                    <%}%>
                                 </select>
                             </div>
                             <div class="form-group">
