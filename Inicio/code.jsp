@@ -31,34 +31,17 @@
       <img src="${pageContext.request.contextPath}/assets/imgs/logoNav.png" alt="vidya logo">
     </div>
 
-    <h1>Vamos te ajudar a recuperar sua senha!</h1>
-    <p class="subtitulo">
-      Por favor, informe seu email:
-    </p>
 
-    <form action="${pageContext.request.contextPath}/passwordReset?type=sendCode" method="get">
-
+    <form action="${pageContext.request.contextPath}/passwordReset?type=verifyCode" method="get">
+      <input type="text" value="verifyCode" name="type">
+      <h2>Te enviamos um código</h2>
       <div class="inputt">
-        <label for="login">Email:</label>
-        <input value="" required name="login" id="login" type="email">
+        <label for="code">Por favor, informe o código recebido em seu email:</label>
+        <input type="text" placeholder="123456" id="code" name="code">
       </div>
       <%@include file="/common/erro.jsp"%>
-      <button id="abrirPopup" type="submit">Recuperar senha</button>
-
+      <button id="continuarBtn">Continuar</button>
     </form>
-
-    <div id="overlay" class="overlay">
-      <div class="popup">
-        <form action="${pageContext.request.contextPath}/passwordReset?type=verifyCode" method="get">
-          <h2>Te enviamos um código</h2>
-          <p>Por favor, informe o código recebido em seu email:</p>
-          <input type="text" placeholder="123456"
-                 name="code">
-          <%@include file="/common/erro.jsp"%>
-          <button id="continuarBtn">Continuar</button>
-        </form>
-      </div>
-    </div>
 
   </div>
 

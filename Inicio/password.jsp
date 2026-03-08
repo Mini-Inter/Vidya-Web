@@ -37,6 +37,7 @@
         </p>
 
         <form action="${pageContext.request.contextPath}/passwordReset?type=sendCode" method="get">
+            <input value="sendCode" name="type" id="type" type="hidden">
             <div class="inputt">
                 <label for="login">Email:</label>
                 <input value="" required name="login" id="login" type="email">
