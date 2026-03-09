@@ -33,7 +33,7 @@
 
 
     <form action="${pageContext.request.contextPath}/passwordReset?type=verifyCode" method="get">
-      <input type="text" value="verifyCode" name="type">
+      <input type="hidden" value="verifyCode" name="type">
       <h2>Te enviamos um código</h2>
       <div class="inputt">
         <label for="code">Por favor, informe o código recebido em seu email:</label>
