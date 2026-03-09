@@ -51,7 +51,7 @@
                             <td class="discipline-name"><%=g.getSubject()%></td>
                             <td class="grade"><%if(g.getN1() == -1.0){%><p>-</p><%}else{%><%=g.getN1()%><%}%></td>
                             <td class="grade"><%if(g.getN2() == -1.0){%><p>-</p><%}else{%><%=g.getN2()%><%}%></td>
-                            <td class="grade"><%=g.getAverage()%></td>
+                            <td class="grade"><%if(g.getAverage() == -1.0){%><p>Indefinido</p><%}else{%><%=g.getAverage()%><%}%></td>
                             <td class="status approved"><%=g.getSituation()%></td>
                         </tr>
                     <%
@@ -60,7 +60,7 @@
                             <td class="discipline-name"><%=g.getSubject()%></td>
                             <td class="grade"><%if(g.getN1() == -1.0){%><p>-</p><%}else{%><%=g.getN1()%><%}%></td>
                             <td class="grade"><%if(g.getN2() == -1.0){%><p>-</p><%}else{%><%=g.getN2()%><%}%></td>
-                            <td class="grade"><%=g.getAverage()%></td>
+                            <td class="grade"><%if(g.getAverage() == -1.0){%><p>Indefinido</p><%}else{%><%=g.getAverage()%><%}%></td>
                             <td class="status approved"><%=g.getSituation()%></td>
                         </tr>
                             <%}

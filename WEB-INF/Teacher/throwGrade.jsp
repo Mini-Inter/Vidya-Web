@@ -56,7 +56,7 @@
                                 <%
                                     for(Class c:listClass){
                                         if(c.getId() == idClass){%>
-                                <option selected value="<%=c.getId()%>"><%=c%></option>
+                                    <option selected value="<%=c.getId()%>"><%=c%></option>
                                 <%
                                         }else{%>
                                 <option value="<%=c.getId()%>"><%=c%></option>
@@ -115,7 +115,6 @@
                                 <span class="nota-final"><%if(g.getAverage()== null){%><p>-</p><%}else{%><%=g.getAverage()%><%}%></span>
                             </div>
                         <%
-
                                 }else{%>
                             <div class="table-row alt">
 
