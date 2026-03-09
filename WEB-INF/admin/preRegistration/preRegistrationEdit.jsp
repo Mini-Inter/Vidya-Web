@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<%@ page import="com.school.miniinter.models.PreRegistration.PreRegistration" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -6,54 +7,13 @@
     <title>Vidya - CRUD</title>
     <link rel="stylesheet" href="addEdit.css">
 </head>
+<%
+    PreRegistration preRegistration = (PreRegistration)
+            session.getAttribute("preRegistration");
+%>
 <body>
 <div class="container">
-    <aside class="sidebar">
-        <div class="logo">
-            <img class="logo-icon" src="./assets/Vydia-logo.jpg">
-            <div class="logo-text">
-                <h1>vidya</h1>
-                <p>Plataforma escolar</p>
-            </div>
-        </div>
-
-        <img class="line" src="./assets/navbar-linha.png" alt="divisor">
-
-        <nav class="nav-menu">
-            <a href="./aluno.html" class="nav-item active">
-                <img class="icon" src="./assets/navbar-aluno.png">
-                <span class="text">Alunos</span>
-            </a>
-            <a href="./professor.html" class="nav-item">
-                <img class="icon" src="./assets/navbar-prof.png">
-                <span class="text">Professores</span>
-            </a>
-            <a href="./materia.html" class="nav-item">
-                <img class="icon" src="./assets/navbar-disciplinas.png">
-                <span class="text">Matérias</span>
-            </a>
-            <a href="./turma.html" class="nav-item ">
-                <img class="icon" src="./assets/navbar-turma.png">
-                <span class="text">Turmas</span>
-            </a>
-            <a href="./observacoes.html" class="nav-item ">
-                <img class="icon" src="./assets/navbar-observacoes.png">
-                <span class="text">Observações</span>
-            </a>
-            <a href="./responsaveis.html" class="nav-item ">
-                <img class="icon" src="./assets/navbar-responsaveis.png">
-                <span class="text">Responsáveis</span>
-            </a>
-        </nav>
-
-        <div class="sidebar-footer">
-            <a href="/Inicio/index.html" class="nav-item logout">
-                <img class="icon" src="./assets/navbar-exit.png">
-                <span class="text">Sair da conta</span>
-            </a>
-        </div>
-
-    </aside>
+    <%@include file="/common/sidebarAdmin.jsp"%>
 
     <main class="main-content">
 
@@ -63,12 +23,14 @@
         <div class="form-add">
             <div class="form-card">
 
-                <form class="student-form">
+                <form class="student-form"
+                      action="${pageContext.request.contextPath}/adminPreRegistration?type=update" method="post">
 
                     <div class="form-preregistror">
                         <div class="form-group">
                             <label for="cpf">CPF</label>
-                            <input type="text" id="cpf" name="cpf" value="234.456.678-98" required>
+                            <input type="text" id="cpf" name="cpf" value="<%=preRegistration.getCpf()%>"
+                                   required>
                         </div>
                     </div>
                     <div class="form-actions">
@@ -76,7 +38,8 @@
                                 <span>Editar
                                 </span>
                         </button>
-                        <a href="./aluno.html" class="btn btn-secundary">Cancelar</a>
+                        <a href="${pageContext.request.contextPath}/adminPreRegistration"
+                           class="btn btn-secundary">Cancelar</a>
                     </div>
                 </form>
             </div>
