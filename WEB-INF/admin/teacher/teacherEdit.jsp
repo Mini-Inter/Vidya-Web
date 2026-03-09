@@ -61,7 +61,7 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="pass">Senha</label>
-                                <input type="password" id="pass" name="pass" value="********" required>
+                                <input type="password" id="pass" name="pass" placeholder="********" value="">
                             </div>
                         </div>
 

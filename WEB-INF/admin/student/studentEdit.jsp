@@ -36,6 +36,7 @@ List<Class> classes = (List<Class>)  session.getAttribute("classes");
                 <div class="form-card">
 
                     <form class="student-form" action="${pageContext.request.contextPath}/adminStudents?type=update" method="post">
+                        <input type="hidden" id="student" name="student" value="<%=student.getId_student()%>" required>
 
                         <div class="form-row">
                             <div class="form-group">
@@ -50,7 +51,7 @@ List<Class> classes = (List<Class>)  session.getAttribute("classes");
                                     <%
                                     }else{%>
                                     <option value="<%=classroom.getId()%>"><%=classroom.getSeries()%>°<%=classroom.getClassroom()%></option>
-                                    <%}%>
+                                    <%}}%>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -82,7 +83,7 @@ List<Class> classes = (List<Class>)  session.getAttribute("classes");
 
                             <div class="form-group">
                                 <label for="pass">Senha </label>
-                                <input type="password" id="pass" name="pass" value="*******" required>
+                                <input type="password" id="pass" name="pass" placeholder="*******" value="">
                             </div>
                         </div>
                         
