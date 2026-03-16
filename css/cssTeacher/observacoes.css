@@ -418,6 +418,15 @@ textarea {
     background-color: var(--verde-agua);
 }
 
+.observation-type.aviso {
+    background-color: var(--laranja);
+}
+
+.observation-type.informativo {
+    background-color: var(--azul-medio);
+}
+
+
 .form-wrapper {
     display: flex;
     justify-content: center;

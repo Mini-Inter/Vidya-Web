@@ -36,6 +36,10 @@
       <img alt="" class="icon" src="${pageContext.request.contextPath}/assets/AdminAssets/navbar-responsaveis.png"></img alt="">
       <span class="text">Responsáveis</span>
     </a>
+    <a href="${pageContext.request.contextPath}/adminPreRegistration" class="nav-item ${active == "preRegister" ? "active" : ""}">
+      <img alt="" class="icon" src="${pageContext.request.contextPath}/assets/AdminAssets/navbar-preregistro.png"></img alt="">
+      <span class="text">Pré Registro</span>
+    </a>
   </nav>
 
   <div class="sidebar-footer">

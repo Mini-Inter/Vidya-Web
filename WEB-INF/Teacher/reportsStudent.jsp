@@ -8,7 +8,7 @@
 <%@ page import="java.time.LocalDate" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    request.setAttribute("active", "report");
+    request.setAttribute("active", "student");
     List<Subject> subjects = (List<Subject>) session.getAttribute("subjects");
     int idSubject = (Integer) session.getAttribute("subject");
 
@@ -86,7 +86,7 @@
                                     <p class="observation-text">
                                         <%=report.getDescription()%>
                                     </p>
-                                    <div class="observation-footer"><span class="observation-type elogio"><%=report.getType()%></span>
+                                    <div class="observation-footer"><span class="observation-type <%=report.getType().toLowerCase()%>"><%=report.getType()%></span>
                                     </div>
                                 </div>
                             </div>

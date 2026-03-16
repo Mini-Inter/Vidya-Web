@@ -89,12 +89,7 @@
                                     <div class="nota-box">
                                         <input type="text" value="<%if(g.getN1()== -1.0){%>-<%}else{%><%=g.getN1()%><%}%>" name="data">
                                         <button type="submit" class="save-btn">
-                                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
-                                                stroke-width="2">
-                                                <path d="M12 3v12"></path>
-                                                <path d="M7 10l5 5 5-5"></path>
-                                                <path d="M5 21h14"></path>
-                                            </svg>
+                                            <img width="22px" src="${pageContext.request.contextPath}/assets/assetsTeacher/check-mark.svg" alt="✓">
                                         </button>
                                     </div>
                                 </form>
@@ -102,12 +97,7 @@
                                     <div class="nota-box">
                                         <input type="text" value="<%if(g.getN2()== -1.0){%>-<%}else{%><%=g.getN2()%><%}%>" name="data">
                                         <button type="submit" class="save-btn">
-                                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
-                                                stroke-width="2">
-                                                <path d="M12 3v12"></path>
-                                                <path d="M7 10l5 5 5-5"></path>
-                                                <path d="M5 21h14"></path>
-                                            </svg>
+                                            <img width="22px" src="${pageContext.request.contextPath}/assets/assetsTeacher/check-mark.svg" alt="✓">
                                         </button>
                                     </div>
                                 </form>
@@ -124,12 +114,7 @@
                                     <div class="nota-box">
                                         <input type="text" value="<%if(g.getN1()== -1.0){%>-<%}else{%><%=g.getN1()%><%}%>" name="data">
                                         <button type="submit" class="save-btn">
-                                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
-                                                 stroke-width="2">
-                                                <path d="M12 3v12"></path>
-                                                <path d="M7 10l5 5 5-5"></path>
-                                                <path d="M5 21h14"></path>
-                                            </svg>
+                                            <img width="22px" src="${pageContext.request.contextPath}/assets/assetsTeacher/check-mark.svg" alt="✓">
                                         </button>
                                         </input>
                                     </div>
@@ -138,16 +123,10 @@
                                     <div class="nota-box">
                                         <input type="text" value="<%if(g.getN2()== -1.0){%>-<%}else{%><%=g.getN2()%><%}%>" name="data">
                                         <button type="submit" class="save-btn">
-                                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
-                                                 stroke-width="2">
-                                                <path d="M12 3v12"></path>
-                                                <path d="M7 10l5 5 5-5"></path>
-                                                <path d="M5 21h14"></path>
-                                            </svg>
+                                            <img width="22px" src="${pageContext.request.contextPath}/assets/assetsTeacher/check-mark.svg" alt="✓">
                                         </button>
                                     </div>
                                 </form>
-
                                 <span class="nota-final"><%if(g.getAverage()== null){%><p>-</p><%}else{%><%=g.getAverage()%><%}%></span>
                             </div>
                                 <%}

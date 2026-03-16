@@ -7,7 +7,8 @@
     --azul-cinza: #194D71;
     --vermelho: #BC0D0D;
     --cinza: #C8D1DC;
-
+    --azul-medio: #5b7aff;
+    --laranja: #ff9500;
 }
 
 body {
@@ -424,6 +425,14 @@ body {
 
 .observation-type.elogio {
     background-color: var(--verde-agua);
+}
+
+.observation-type.aviso {
+    background-color: var(--laranja);
+}
+
+.observation-type.informativo {
+    background-color: var(--azul-medio);
 }
 
 .overlay {

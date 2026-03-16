@@ -6,9 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - CRUD</title>
-    <link rel="stylesheet" href="addEdit.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/geral/default.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cssAdmin/addEdit.css">
 </head>
-
+<%
+    request.setAttribute("active", "preRegister");
+%>
 <body>
 <div class="container">
     <%@include file="/common/sidebarAdmin.jsp"%>

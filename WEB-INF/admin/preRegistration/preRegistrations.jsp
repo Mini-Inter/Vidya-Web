@@ -7,11 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidya - CRUD</title>
-    <link rel="stylesheet" href="crud.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/geral/default.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cssAdmin/crud.css">
 </head>
 
 <%
-    List<PreRegistration> preRegistrations = (List<PreRegistration>) 
+    request.setAttribute("active", "preRegister");
+    List<PreRegistration> preRegistrations = (List<PreRegistration>)
             session.getAttribute("preRegistrations");
 %>
 
@@ -64,7 +66,7 @@
                         <td><%=preRegister.getCpf()%></td>
                         <td class="actions">
                             <a class="btn-edit"
-                               href="${pageContext.request.contextPath}/adminStudents?type=edit"><img src="${pageContext.request.contextPath}/assets/AdminAssets/editar.png"></a>
+                               href="${pageContext.request.contextPath}/adminPreRegistration?type=edit&id=<%=preRegister.getId()%>"><img src="${pageContext.request.contextPath}/assets/AdminAssets/editar.png"></a>
                             <button class="btn-delete"><img src="${pageContext.request.contextPath}/assets/AdminAssets/deletar.png"></button>
                         </td>
                     </tr>

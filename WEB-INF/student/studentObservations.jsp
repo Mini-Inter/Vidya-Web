@@ -58,14 +58,13 @@
                             <%=c.getDescription()%>
                         </p>
                         <div class="observation-footer">
-                            <%System.out.println(c.getType().toLowerCase());%>
+                            <%=c.getType().toLowerCase()%>
                             <span class="observation-type <%=c.getType().toLowerCase()%>">
                                 <%=c.getType()%></span>
                         </div>
                     </div>
                 </div>
                 <%}%>
-                
             </div>
         </main>
     </div>

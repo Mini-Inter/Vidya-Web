@@ -63,7 +63,7 @@
                                                 <%=c.getDescription()%>
                                             </p>
                                             <div class="observation-footer">
-                                                <span class="observation-type elogio"><%=c.getType()%></span>
+                                                <span class="observation-type <%=c.getType().toLowerCase()%>"><%=c.getType()%></span>
                                             </div>
                                         </div>
                                     </div>
