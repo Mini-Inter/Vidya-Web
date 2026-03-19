@@ -85,7 +85,11 @@
 
                                 <span class="aluno"><%=g.getFull_name()%></span>
 
-                                <form action="<%if(g.getN1().equals(-1.0)){%>addData?idStudent=<%=g.getId_student()%>&n=1&class=<%=request.getAttribute("id_class")%><%}else{%>updateData?idGrade=<%=g.getIdN1()%>&class=<%=request.getAttribute("id_class")%>&idData=<%=g.getIdN1()%><%}%>" method="post">
+                                <form action="${pageContext.request.contextPath}/updateGrade" method="post">
+                                    <input type="hidden" value="<%=g.getId_student()%>" name="student">
+                                    <input type="hidden" value="<%=g.getIdN1()%>" name="idData">
+                                    <input type="hidden" value="<%=g.getN1()%>" name="value">
+                                    <input type="hidden" value="1" name="type">
                                     <div class="nota-box">
                                         <input type="text" value="<%if(g.getN1()== -1.0){%>-<%}else{%><%=g.getN1()%><%}%>" name="data">
                                         <button type="submit" class="save-btn">
@@ -93,7 +97,11 @@
                                         </button>
                                     </div>
                                 </form>
-                                <form action="<%if(g.getN2().equals(-1.0)){%>addData?idStudent=<%=g.getId_student()%>&n=2&class=<%=request.getAttribute("id_class")%><%}else{%>updateData?idGrade=<%=g.getIdN2()%>&class=<%=request.getAttribute("id_class")%>&idData=<%=g.getIdN2()%><%}%>" method="post">
+                                <form action="${pageContext.request.contextPath}/updateGrade" method="post">
+                                    <input type="hidden" value="<%=g.getId_student()%>" name="student">
+                                    <input type="hidden" value="<%=g.getIdN2()%>" name="idData">
+                                    <input type="hidden" value="2" name="type">
+                                    <input type="hidden" value="<%=g.getN2()%>" name="value">
                                     <div class="nota-box">
                                         <input type="text" value="<%if(g.getN2()== -1.0){%>-<%}else{%><%=g.getN2()%><%}%>" name="data">
                                         <button type="submit" class="save-btn">
@@ -110,7 +118,11 @@
 
                                 <span class="aluno"><%=g.getFull_name()%></span>
 
-                                <form action="<%if(g.getN1().equals(-1.0)){%>addData?idStudent=<%=g.getId_student()%>&n=1&class=<%=request.getAttribute("id_class")%><%}else{%>updateData?idGrade=<%=g.getIdN1()%>&class=<%=request.getAttribute("id_class")%>&idData=<%=g.getIdN1()%><%}%>" method="post">
+                                <form action="${pageContext.request.contextPath}/updateGrade" method="post">
+                                    <input type="hidden" value="<%=g.getId_student()%>" name="student">
+                                    <input type="hidden" value="<%=g.getIdN1()%>" name="idData">
+                                    <input type="hidden" value="<%=g.getN1()%>" name="value">
+                                    <input type="hidden" value="1" name="type">
                                     <div class="nota-box">
                                         <input type="text" value="<%if(g.getN1()== -1.0){%>-<%}else{%><%=g.getN1()%><%}%>" name="data">
                                         <button type="submit" class="save-btn">
@@ -119,7 +131,11 @@
                                         </input>
                                     </div>
                                 </form>
-                                <form action="<%if(g.getN2().equals(-1.0)){%>addData?idStudent=<%=g.getId_student()%>&n=2&class=<%=request.getAttribute("id_class")%><%}else{%>updateData?idGrade=<%=g.getIdN2()%>&class=<%=request.getAttribute("id_class")%>&idData=<%=g.getIdN2()%><%}%>" method="post">
+                                <form action="${pageContext.request.contextPath}/updateGrade" method="post">
+                                    <input type="hidden" value="<%=g.getId_student()%>" name="student">
+                                    <input type="hidden" value="<%=g.getIdN2()%>" name="idData">
+                                    <input type="hidden" value="2" name="type">
+                                    <input type="hidden" value="<%=g.getN2()%>" name="value">
                                     <div class="nota-box">
                                         <input type="text" value="<%if(g.getN2()== -1.0){%>-<%}else{%><%=g.getN2()%><%}%>" name="data">
                                         <button type="submit" class="save-btn">
